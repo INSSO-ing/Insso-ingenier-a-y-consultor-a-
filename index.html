@@ -4,72 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- ===== VERIFICACIÓN DE GOOGLE SEARCH CONSOLE ===== -->
+    <!-- ===== VERIFICACIÓN DE GOOGLE ===== -->
     <meta name="google-site-verification" content="YCJLRrF_Z0CSg3QFkUFsz9XsP0reUq94qknr-BEZAl4" />
-    
-    <!-- ===== VERIFICACIÓN ANTERIOR (opcional) ===== -->
     <meta name="google-site-verification" content="google130dfdc9cb03b0fb" />
     
     <title>INSSO | Ingeniería y Seguridad Industrial en Villeta, Paraguay</title>
     
-    <meta name="description" content="INSSO: Soluciones en ingeniería y seguridad industrial en Villeta, Paraguay. Electricidad, mantenimiento mecánico, refrigeración, capacitaciones SySO y protección contra incendios. ¡Cotiza ahora!" />
-    
-    <meta name="keywords" content="INSSO, seguridad industrial Paraguay, ingeniería Villeta, consultoría SySO, electricidad industrial, mantenimiento mecánico, refrigeración industrial, protección contra incendios, capacitaciones laborales" />
-    
+    <meta name="description" content="INSSO: Soluciones en ingeniería y seguridad industrial en Villeta, Paraguay. Electricidad, mantenimiento mecánico, refrigeración, capacitaciones SySO y protección contra incendios." />
+    <meta name="keywords" content="INSSO, seguridad industrial Paraguay, ingeniería Villeta, SySO, electricidad industrial, mantenimiento mecánico, refrigeración industrial" />
     <meta name="author" content="INSSO Soluciones Industriales" />
-    
     <meta name="robots" content="index, follow" />
     
-    <meta property="og:title" content="INSSO | Ingeniería y Seguridad Industrial en Villeta, Paraguay" />
-    <meta property="og:description" content="Soluciones en ingeniería y seguridad industrial. Electricidad, mantenimiento, refrigeración, SySO y protección contra incendios." />
+    <meta property="og:title" content="INSSO | Ingeniería y Seguridad Industrial" />
+    <meta property="og:description" content="Soluciones en ingeniería y seguridad industrial en Villeta, Paraguay." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://insso-ingenieria.netlify.app/" />
+    <meta property="og:url" content="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/" />
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="INSSO | Ingeniería y Seguridad Industrial en Villeta" />
-    <meta name="twitter:description" content="Soluciones en ingeniería y seguridad industrial en Paraguay." />
+    <link rel="canonical" href="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/" />
     
-    <link rel="canonical" href="https://insso-ingenieria.netlify.app/" />
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "INSSO Soluciones Industriales",
-      "description": "Empresa especializada en ingeniería, electricidad industrial, mantenimiento mecánico, refrigeración y seguridad industrial (SySO).",
-      "url": "https://insso-ingenieria.netlify.app/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Villeta",
-        "addressRegion": "Central",
-        "addressCountry": "PY"
-      },
-      "areaServed": "Paraguay"
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         /* ===== VARIABLES ===== */
         :root {
             --primary: #0B2545;
             --secondary: #134074;
             --accent: #F35B04;
-            --fire: #DC2626;
-            --fire-dark: #991B1B;
-            --bg: #EEF4F8;
+            --accent-hover: #d44f04;
+            --bg: #F8FAFC;
             --text-main: #1E293B;
             --text-muted: #64748B;
             --white: #ffffff;
-            --radius: 16px;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -87,30 +55,28 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* ===== NAVEGACIÓN FIJA ===== */
+        /* ===== NAVEGACIÓN ===== */
         nav {
-            background: rgba(11, 37, 69, 0.95);
-            padding: 10px 0;
+            background: var(--primary);
+            padding: 12px 0;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -118,26 +84,31 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
         }
 
         .logo img {
-            height: 38px;
+            height: 40px;
             width: auto;
-            border-radius: 0;
-            transition: transform 0.3s ease;
-            background: transparent;
             filter: brightness(0) invert(1);
         }
 
-        .logo img:hover {
-            transform: scale(1.05);
+        .logo span {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span .accent {
+            color: var(--accent);
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 24px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -145,505 +116,729 @@
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 6px 0;
+            transition: var(--transition);
         }
+
         .nav-links a:hover {
             color: var(--accent);
         }
 
-        /* ===== HERO - PANTALLA COMPLETA CON LOGO ===== */
-        .hero-fullscreen {
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: var(--white);
-            padding: 70px 20px 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-fullscreen::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--accent), var(--primary), var(--accent));
-            z-index: 1;
-        }
-
-        /* === LOGO GIGANTE - SIN FONDO === */
-        .hero-logo-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 10px;
-            flex: 1;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-logo {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            max-height: 70vh;
-            object-fit: contain;
-            filter: drop-shadow(0 20px 60px rgba(11, 37, 69, 0.15));
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border-radius: 0;
-            background: transparent;
-            padding: 10px;
-        }
-
-        .hero-logo:hover {
-            transform: scale(1.02);
-        }
-
-        /* === TEXTO DEBAJO DEL LOGO === */
-        .hero-tagline {
-            margin-top: 5px;
-            padding-bottom: 10px;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        .hero-tagline .badge {
-            display: inline-block;
-            background: rgba(243, 91, 4, 0.12);
-            color: var(--accent);
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 1px solid rgba(243, 91, 4, 0.2);
-            margin-bottom: 10px;
-        }
-
-        .hero-tagline h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--text-main);
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .hero-tagline h2 span {
-            color: var(--accent);
-        }
-
-        .hero-tagline p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 16px;
-        }
-
-        .hero-btn {
-            display: inline-block;
+        .nav-links .btn-contact {
             background: var(--accent);
             color: var(--white);
-            padding: 14px 36px;
+            padding: 8px 20px;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(243, 91, 4, 0.3);
-        }
-
-        .hero-btn:hover {
-            background: #d44f04;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(243, 91, 4, 0.4);
-        }
-
-        /* ===== ANIMACIONES ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ===== SECCIÓN DE CONTENIDO ===== */
-        .content-section {
-            background: var(--bg);
-            padding: 40px 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* ===== SELECTOR ===== */
-        .branch-selector {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0 40px;
-            flex-wrap: wrap;
-        }
-
-        .branch-btn {
-            flex: 1;
-            min-width: 250px;
-            max-width: 400px;
-            background: var(--white);
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 20px 24px;
-            border-radius: var(--radius);
-            text-decoration: none;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        .branch-btn:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(11, 37, 69, 0.15);
-        }
-        .branch-btn span {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            margin-top: 6px;
-        }
-        .branch-btn:hover span {
-            color: #cbd5e1;
-        }
-
-        /* ===== SECCIONES ===== */
-        .section-header {
-            background: var(--primary);
-            color: var(--white);
-            padding: 20px 24px;
-            border-radius: var(--radius);
-            margin: 60px 0 30px;
-            text-align: center;
-        }
-        .section-header.safety {
-            background: #CC4E02;
-        }
-        .section-header.pci {
-            background: linear-gradient(135deg, #991B1B, #DC2626);
-            position: relative;
-            overflow: hidden;
-        }
-        .section-header.pci::before {
-            content: '🔥';
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2.5rem;
-            animation: fire-flicker 0.5s ease-in-out infinite alternate;
-        }
-        .section-header.pci::after {
-            content: '🧯';
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2.5rem;
-            animation: fire-flicker 0.7s ease-in-out infinite alternate;
-        }
-        .section-header.mantenimiento {
-            background: #0B6E4F;
-        }
-        .section-header.otros {
-            background: #0B6E4F;
-        }
-        .section-header.galeria {
-            background: #134074;
-        }
-
-        @keyframes fire-flicker {
-            0% {
-                opacity: 0.6;
-                transform: translateY(-50%) scale(0.9);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(-50%) scale(1.1);
-            }
-        }
-
-        /* ===== GRID ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            border: 1px solid #E2E8F0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 16px;
-            font-size: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card ul {
-            list-style: none;
-        }
-        .card ul li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            padding-left: 24px;
-            position: relative;
-            color: #334155;
-        }
-        .card ul li::before {
-            content: "✓";
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        .card ul li small {
-            display: block;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-            padding-left: 4px;
-        }
-
-        /* ===== TARJETAS CON IMAGEN ===== */
-        .card-image {
-            position: relative;
-            overflow: hidden;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            color: white;
-            padding: 30px;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-image .bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            transition: transform 0.5s ease;
-        }
-
-        .card-image:hover .bg-image {
-            transform: scale(1.08);
-        }
-
-        .card-image .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(11, 37, 69, 0.85) 0%, rgba(11, 37, 69, 0.3) 100%);
-            z-index: 1;
-        }
-
-        .card-image .overlay-fire {
-            background: linear-gradient(0deg, rgba(20, 10, 10, 0.9) 0%, rgba(20, 10, 10, 0.4) 100%);
-        }
-
-        .card-image .content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .card-image h3 {
-            color: white;
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .card-image p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        .card-image .click-hint {
-            display: inline-block;
-            margin-top: 12px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 4px 16px;
-            border-radius: 50px;
-            font-size: 0.7rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            backdrop-filter: blur(4px);
+            transition: var(--transition);
         }
 
-        .card-image .click-hint.fire-hint {
-            background: rgba(220, 38, 38, 0.6);
+        .nav-links .btn-contact:hover {
+            background: var(--accent-hover);
+            transform: scale(1.05);
+            color: var(--white);
         }
 
-        .card-image:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* ===== TARJETAS PCI ===== */
-        .card-pci {
-            background: linear-gradient(135deg, #1a1a2e, #2d1b1b);
-            color: white;
-            border: 1px solid rgba(220, 38, 38, 0.3);
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
             position: relative;
             overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card-pci::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.05), transparent 60%);
-            z-index: 0;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(243,91,4,0.15), transparent 70%);
+            border-radius: 50%;
         }
 
-        .card-pci:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.2);
-            border-color: var(--fire);
-        }
-
-        .card-pci .content {
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
             position: relative;
             z-index: 1;
         }
 
-        .card-pci h3 {
-            color: #FCA5A5;
-            margin-bottom: 12px;
-            font-size: 1.25rem;
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
-        .card-pci ul {
-            list-style: none;
-        }
-        .card-pci ul li {
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-            padding-left: 24px;
-            position: relative;
-        }
-        .card-pci ul li::before {
-            content: "🔥";
-            color: var(--fire);
-            position: absolute;
-            left: 0;
-            font-size: 0.9rem;
-        }
-
-        .card-pci .badge-fire {
-            display: inline-block;
-            background: var(--fire);
-            color: white;
-            padding: 4px 16px;
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            padding: 14px 32px;
             border-radius: 50px;
-            font-size: 0.7rem;
+            text-decoration: none;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
+            transition: var(--transition);
+            display: inline-block;
         }
 
-        /* ===== GALERÍA ===== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243,91,4,0.3);
         }
 
-        .gallery-item {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: var(--white);
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-item .caption {
-            padding: 16px;
-            text-align: center;
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 600;
-            color: var(--primary);
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 350px;
+            filter: drop-shadow(0 20px 60px rgba(0,0,0,0.3));
+            border-radius: 12px;
+        }
+
+        /* ===== SECCIÓN SOBRE NOSOTROS ===== */
+        .about {
+            padding: 80px 0;
             background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .section-title h2 span {
+            color: var(--accent);
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .about-text .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .about-text .features li {
+            list-style: none;
+            font-weight: 500;
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
         }
 
-        .gallery-item .caption .view-icon {
-            font-size: 0.7rem;
-            background: var(--accent);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 50px;
+        .about-text .features li::before {
+            content: "✅";
+            color: var(--accent);
         }
 
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* ===== SERVICIOS ===== */
+        .services {
+            padding: 80px 0;
+            background: var(--bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+
+        .service-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .service-card .service-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .service-card .service-link:hover {
+            color: var(--accent-hover);
+            transform: translateX(4px);
+        }
+
+        /* ===== CLIENTES ===== */
+        .clients {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .clients-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .client-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            opacity: 0.6;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 24px;
+            background: var(--bg);
+            border-radius: 8px;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        /* ===== CONTADORES ===== */
+        .counters {
+            padding: 60px 0;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .counters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .counter-item .number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        .counter-item .label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ===== CONTACTO ===== */
+        .contact {
+            padding: 80px 0;
+            background: var(--bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .contact-detail .icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-detail a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            margin-bottom: 16px;
+            background: var(--white);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(243,91,4,0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn-submit {
+            background: var(--accent);
+            color: var(--white);
+            padding: 14px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .contact-form .btn-submit:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        footer .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 24px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image img {
+                max-height: 250px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links a:not(.btn-contact) {
+                display: none;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-text .features {
+                grid-template-columns: 1fr;
+            }
+            .counters-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            .counter-item .number {
+                font-size: 2rem;
+            }
+            .logo img {
+                height: 32px;
+            }
+            .logo span {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="photo-removebg-preview.png" alt="INSSO">
+                <span>INSSO<span class="accent">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#contacto" class="btn-contact">📞 Cotizar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ingeniería y <span>Seguridad Industrial</span> en Villeta</h1>
+                    <p>Soluciones integrales que garantizan tu operatividad y seguridad industrial para la continuidad de tu operación.</p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn-primary">📞 Solicita una Asesoría</a>
+                        <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="photo-removebg-preview.png" alt="INSSO - Ingeniería y Seguridad Industrial">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE NOSOTROS ===== -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre <span>Nosotros</span></h2>
+                <p>Expertos en ingeniería y seguridad industrial con más de 10 años de experiencia en el mercado paraguayo.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Somos INSSO, una empresa especializada en brindar soluciones integrales en ingeniería y seguridad industrial. Con sede en Villeta, Paraguay, atendemos a empresas de todos los sectores.</p>
+                    <p>Nuestro equipo multidisciplinario está comprometido con la excelencia, la innovación y la seguridad de tus trabajadores.</p>
+                    <ul class="features">
+                        <li>Más de 10 años de experiencia</li>
+                        <li>+150 clientes satisfechos</li>
+                        <li>Equipo certificado</li>
+                        <li>Servicio 24/7</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" alt="Equipo INSSO">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros <span>Servicios</span></h2>
+                <p>Soluciones especializadas para tu empresa, con los más altos estándares de calidad y seguridad.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" onclick="openModal('electricidad')">
+                    <span class="icon">⚡</span>
+                    <h3>Electricidad Industrial</h3>
+                    <p>Diagnóstico, instalación y mantenimiento de sistemas eléctricos de alta potencia.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('electricidad')">Ver más →</a>
+                </div>
+                <div class="service-card" onclick="openModal('mecanica')">
+                    <span class="icon">⚙️</span>
+                    <h3>Mantenimiento Mecánico</h3>
+                    <p>Gestión integral de compresores, bombas industriales y maquinaria pesada.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('mecanica')">Ver más →</a>
+                </div>
+                <div class="service-card" onclick="openModal('refrigeracion')">
+                    <span class="icon">❄️</span>
+                    <h3>Refrigeración Industrial</h3>
+                    <p>Sistemas Chiller, aire acondicionado industrial y detección de fugas.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('refrigeracion')">Ver más →</a>
+                </div>
+                <div class="service-card" onclick="openModal('seguridad-ocupacional')">
+                    <span class="icon">🛡️</span>
+                    <h3>Consultoría SySO</h3>
+                    <p>Matrices IPERC, planes de emergencia, auditorías y asesorías en seguridad.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('seguridad-ocupacional')">Ver más →</a>
+                </div>
+                <div class="service-card" onclick="openModal('capacitaciones')">
+                    <span class="icon">🎓</span>
+                    <h3>Capacitaciones</h3>
+                    <p>EPP, LOTO, trabajos en altura, espacios confinados y combate de incendio.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('capacitaciones')">Ver más →</a>
+                </div>
+                <div class="service-card" onclick="openModal('deteccion')">
+                    <span class="icon">🔥</span>
+                    <h3>Protección Contra Incendios</h3>
+                    <p>Detección, rociadores, hidrantes y mantenimiento de sistemas PCI.</p>
+                    <a href="#" class="service-link" onclick="event.preventDefault(); openModal('deteccion')">Ver más →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CLIENTES ===== -->
+    <section class="clients" id="clientes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros <span>Clientes</span></h2>
+                <p>Empresas que confían en INSSO para su seguridad y operatividad.</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-logo">🏭 Industria PY</div>
+                <div class="client-logo">⚡ Energía SA</div>
+                <div class="client-logo">🚧 Construcciones</div>
+                <div class="client-logo">🌾 Agronegocios</div>
+                <div class="client-logo">🏗️ INSSO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTADORES ===== -->
+    <section class="counters">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-item">
+                    <div class="number" id="yearsCounter">10+</div>
+                    <div class="label">Años de Experiencia</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number" id="clientsCounter">150+</div>
+                    <div class="label">Clientes Satisfechos</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number" id="projectsCounter">89+</div>
+                    <div class="label">Proyectos Realizados</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number">24/7</div>
+                    <div class="label">Soporte Técnico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos, te <span>atenderemos</span> en breve</h2>
+                <p>Estamos comprometidos con la satisfacción de nuestros clientes.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>📬 Información de Contacto</h3>
+                    <p>Ponte en contacto con nosotros a través de cualquiera de nuestros canales.</p>
+                    <div class="contact-detail">
+                        <span class="icon">📞</span>
+                        <a href="https://wa.me/595992311266" target="_blank">+595 992 311 266</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="icon">✉️</span>
+                        <a href="mailto:insso_consultora@outlook.com">insso_consultora@outlook.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="icon">📍</span>
+                        <span>Villeta, Paraguay</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="icon">🕐</span>
+                        <span>Lunes a Viernes: 8:00 - 18:00</span>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://wa.me/595992311266" target="_blank" class="btn-primary" style="display: inline-block;">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div>
+                    <form class="contact-form" action="mailto:insso_consultora@outlook.com" method="POST" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        <input type="text" name="phone" placeholder="Teléfono">
+                        <textarea name="message" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <p>&copy; 2026 INSSO Soluciones Industriales. Todos los derechos reservados. | Villeta, Paraguay</p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">
+                <a href="mailto:insso_consultora@outlook.com" style="color: var(--accent); text-decoration: none;">insso_consultora@outlook.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="modal" onclick="if(event.target===this) closeModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <img class="modal-image" id="modalImage" src="" alt="Detalle del servicio">
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <span class="modal-subtitle" id="modalSubtitle"></span>
+                <p id="modalDescription"></p>
+                <ul id="modalList"></ul>
+                <a href="#contacto" class="modal-btn" onclick="closeModal()">📞 Solicita una Asesoría</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
         /* ===== MODAL ===== */
         .modal-overlay {
             display: none;
@@ -652,28 +847,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.7);
             backdrop-filter: blur(8px);
             z-index: 1000;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            animation: fadeIn 0.3s ease;
         }
 
         .modal-overlay.active {
             display: flex;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
         }
 
         .modal-content {
@@ -683,19 +866,12 @@
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
-            position: relative;
             animation: slideUp 0.3s ease;
         }
 
         @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .modal-close {
@@ -710,13 +886,12 @@
             border-radius: 50%;
             font-size: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             z-index: 10;
             margin: 16px 16px 0 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .modal-close:hover {
@@ -726,9 +901,8 @@
 
         .modal-image {
             width: 100%;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
-            display: block;
         }
 
         .modal-body {
@@ -747,10 +921,6 @@
             font-size: 0.95rem;
             margin-bottom: 16px;
             display: block;
-        }
-
-        .modal-body .modal-subtitle.fire-sub {
-            color: var(--fire);
         }
 
         .modal-body p {
@@ -794,1296 +964,24 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             margin-top: 10px;
         }
 
         .modal-btn:hover {
-            background: #d44f04;
+            background: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(243, 91, 4, 0.3);
         }
 
         .modal-btn.fire-btn {
-            background: var(--fire);
+            background: #DC2626;
         }
         .modal-btn.fire-btn:hover {
-            background: var(--fire-dark);
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        /* ===== BOTONES FLOTANTES ===== */
-        .floating-buttons {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .floating-buttons .float-btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 24px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            animation: float-bounce 2s ease-in-out infinite;
-            position: relative;
-        }
-
-        .floating-buttons .float-btn .icon {
-            font-size: 1.8rem;
-            animation: icon-bounce 1.5s ease-in-out infinite;
-        }
-
-        .floating-buttons .float-btn .text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-
-        .floating-buttons .float-btn .text strong {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-        }
-
-        .floating-buttons .float-btn .text small {
-            font-size: 0.7rem;
-            opacity: 0.9;
-            font-weight: 400;
-        }
-
-        .floating-buttons .float-btn .badge {
-            background: #FFD700;
-            color: #1a1a2e;
-            padding: 3px 12px;
-            border-radius: 50px;
-            font-size: 0.6rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: blink-badge 1.2s ease-in-out infinite;
-            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
-        }
-
-        @keyframes blink-badge {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.6;
-                transform: scale(0.95);
-            }
-        }
-
-        @keyframes float-bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
-        }
-
-        @keyframes icon-bounce {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2) rotate(-5deg);
-            }
-        }
-
-        .floating-buttons .whatsapp-btn {
-            background: #25D366;
-            color: white;
-            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.4);
-            animation: pulse-whatsapp 1.8s ease-in-out infinite;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .floating-buttons .whatsapp-btn::before {
-            content: '';
-            position: absolute;
-            top: -6px;
-            left: -6px;
-            right: -6px;
-            bottom: -6px;
-            border-radius: 65px;
-            border: 3px solid rgba(37, 211, 102, 0.2);
-            animation: pulse-ring 1.8s ease-in-out infinite;
-        }
-
-        @keyframes pulse-ring {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            70% {
-                transform: scale(1.1);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
-
-        @keyframes pulse-whatsapp {
-            0% {
-                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.4);
-                transform: scale(1);
-            }
-            50% {
-                box-shadow: 0 8px 55px rgba(37, 211, 102, 0.7);
-                transform: scale(1.02);
-            }
-            100% {
-                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.4);
-                transform: scale(1);
-            }
-        }
-
-        .floating-buttons .whatsapp-btn:hover {
-            transform: scale(1.08);
-            background: #1ebd57;
-            box-shadow: 0 12px 50px rgba(37, 211, 102, 0.6);
-            animation: none;
-        }
-
-        .floating-buttons .email-btn {
-            background: #134074;
-            color: white;
-            box-shadow: 0 8px 35px rgba(19, 64, 116, 0.4);
-            border: 3px solid rgba(255, 255, 255, 0.15);
-            animation: float-bounce 2.5s ease-in-out infinite;
-        }
-
-        .floating-buttons .email-btn:hover {
-            transform: scale(1.08);
-            background: #0B2545;
-            box-shadow: 0 12px 50px rgba(19, 64, 116, 0.5);
-        }
-
-        .floating-buttons .email-btn .icon {
-            animation: none;
-        }
-
-        .floating-buttons .email-btn:hover .icon {
-            animation: icon-bounce 1.5s ease-in-out infinite;
-        }
-
-        /* ===== CONTACTO ===== */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: var(--white);
-            padding: 70px 40px;
-            border-radius: var(--radius);
-            text-align: center;
-            margin-top: 60px;
-            border: 2px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(243, 91, 4, 0.08), transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .contact-section::after {
-            content: '';
-            position: absolute;
-            bottom: -50%;
-            left: -30%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(243, 91, 4, 0.05), transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .contact-section * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 16px;
-            font-weight: 900;
-        }
-
-        .contact-section h2 span {
-            color: var(--accent);
-        }
-
-        .contact-section .contact-description {
-            color: #94A3B8;
-            margin-bottom: 35px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .contact-section .contact-highlight {
-            display: inline-block;
-            background: rgba(243, 91, 4, 0.15);
-            color: var(--accent);
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(243, 91, 4, 0.2);
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            padding: 20px 50px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.4rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.4);
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            animation: pulse-whatsapp 2s ease-in-out infinite;
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-5px) scale(1.03);
-            background: #1ebd57;
-            box-shadow: 0 12px 50px rgba(37, 211, 102, 0.5);
-            animation: none;
-        }
-
-        .btn-whatsapp .icon {
-            font-size: 2.5rem;
-        }
-
-        .btn-whatsapp .whatsapp-badge-float {
-            background: #FFD700;
-            color: #1a1a2e;
-            padding: 4px 16px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: blink-badge 1.2s ease-in-out infinite;
-            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
-        }
-
-        .btn-email {
-            background: var(--accent);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-email:hover {
-            background: #d44f04;
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 8px 30px rgba(243, 91, 4, 0.3);
-        }
-
-        .btn-email .icon {
-            font-size: 1.8rem;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.08);
-            color: #94A3B8;
-            padding: 16px 32px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-        }
-
-        .btn-secondary .icon {
-            font-size: 1.2rem;
-        }
-
-        /* ===== CONTADOR ===== */
-        .counter-section {
-            background: var(--white);
-            padding: 35px 30px;
-            border-radius: var(--radius);
-            text-align: center;
-            margin: 60px 0 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            border: 1px solid #E2E8F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .counter-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .counter-item .icon {
-            font-size: 2.2rem;
-            animation: pulse-icon 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-icon {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        .counter-item .info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .counter-item .info .number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--primary);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .counter-item .info .number span {
-            color: var(--accent);
-        }
-
-        .counter-item .info .label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .counter-divider {
-            width: 2px;
-            height: 60px;
-            background: #E2E8F0;
-        }
-
-        .counter-badge {
-            background: linear-gradient(135deg, var(--accent), #d44f04);
-            color: white;
-            padding: 8px 24px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            animation: pulse-badge 1.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse-badge {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.8;
-            }
-        }
-
-        /* ===== COMPLIANCE ===== */
-        .compliance-box {
-            background: #FFF7ED;
-            border: 1px solid #FFEDD5;
-            border-left: 5px solid var(--accent);
-            padding: 30px;
-            border-radius: var(--radius);
-            margin-bottom: 60px;
-        }
-        .compliance-box h4 {
-            color: #9A3412;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .compliance-box p {
-            color: #7C2D12;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-        .compliance-box ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-        }
-        .compliance-box ul li {
-            font-size: 0.95rem;
-            padding-left: 28px;
-            position: relative;
-            color: #5a1e0a;
-        }
-        .compliance-box ul li::before {
-            content: "⚠️";
-            position: absolute;
-            left: 0;
-            font-size: 0.9rem;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            border-top: 1px solid #E2E8F0;
-            margin-top: 20px;
-        }
-
-        footer .footer-emails {
-            margin-top: 8px;
-            font-size: 0.85rem;
-            color: #94A3B8;
-        }
-
-        footer .footer-emails a {
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer .footer-emails .email-primary {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        footer .footer-emails .email-primary:hover {
-            color: #d44f04;
-            text-decoration: underline;
-        }
-
-        footer .footer-emails .email-secondary {
-            color: #64748B;
-            font-size: 0.8rem;
-        }
-
-        footer .footer-emails .email-secondary:hover {
-            color: #94A3B8;
-            text-decoration: underline;
-        }
-
-        footer .footer-emails .separator {
-            margin: 0 8px;
-            color: #475569;
-        }
-
-        footer .footer-analytics {
-            margin-top: 4px;
-            font-size: 0.75rem;
-            color: #64748B;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
-            .hero-logo {
-                max-width: 700px;
-                max-height: 60vh;
-            }
-            .hero-tagline h2 {
-                font-size: 1.4rem;
-            }
-            .contact-section h2 {
-                font-size: 2.2rem;
-            }
-            .floating-buttons .float-btn {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-            }
-            .floating-buttons .float-btn .icon {
-                font-size: 1.4rem;
-            }
-            .floating-buttons .float-btn .text strong {
-                font-size: 0.95rem;
-            }
-            .floating-buttons .float-btn .text small {
-                font-size: 0.6rem;
-            }
-            .floating-buttons .float-btn .badge {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-fullscreen {
-                padding: 60px 16px 20px;
-                min-height: 100dvh;
-            }
-            .hero-logo-wrapper {
-                padding: 5px;
-                max-width: 100%;
-                flex: none;
-            }
-            .hero-logo {
-                max-width: 95%;
-                max-height: 50vh;
-            }
-            .hero-tagline h2 {
-                font-size: 1.1rem;
-            }
-            .hero-tagline p {
-                font-size: 0.9rem;
-            }
-            .hero-btn {
-                padding: 12px 28px;
-                font-size: 0.95rem;
-            }
-            .branch-selector {
-                flex-direction: column;
-                align-items: center;
-            }
-            .branch-btn {
-                max-width: 100%;
-                width: 100%;
-            }
-            .nav-links {
-                display: none;
-            }
-            .contact-section {
-                padding: 40px 20px;
-            }
-            .contact-section h2 {
-                font-size: 1.8rem;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .gallery-item img {
-                height: 180px;
-            }
-            .floating-buttons {
-                bottom: 16px;
-                right: 16px;
-                gap: 10px;
-            }
-            .floating-buttons .float-btn {
-                padding: 10px 16px;
-                border-radius: 50px;
-                gap: 8px;
-                font-size: 0.8rem;
-            }
-            .floating-buttons .float-btn .icon {
-                font-size: 1.2rem;
-            }
-            .floating-buttons .float-btn .text strong {
-                font-size: 0.8rem;
-            }
-            .floating-buttons .float-btn .text small {
-                display: none;
-            }
-            .floating-buttons .float-btn .badge {
-                display: none;
-            }
-            .floating-buttons .whatsapp-btn::before {
-                display: none;
-            }
-            .logo img {
-                height: 32px;
-            }
-            .card-image {
-                min-height: 220px;
-                padding: 20px;
-            }
-            .modal-body {
-                padding: 20px;
-            }
-            .modal-image {
-                height: 200px;
-            }
-            .modal-body h2 {
-                font-size: 1.4rem;
-            }
-            .section-header.pci::before,
-            .section-header.pci::after {
-                display: none;
-            }
-            .counter-section {
-                padding: 20px;
-                gap: 20px;
-                margin: 40px 0 20px;
-            }
-            .counter-item .info .number {
-                font-size: 1.8rem;
-            }
-            .counter-divider {
-                display: none;
-            }
-            .counter-item .icon {
-                font-size: 1.6rem;
-            }
-            .btn-whatsapp {
-                padding: 16px 30px;
-                font-size: 1.1rem;
-            }
-            .btn-whatsapp .icon {
-                font-size: 1.8rem;
-            }
-            .btn-email {
-                padding: 16px 28px;
-                font-size: 1rem;
-            }
-            .btn-email .icon {
-                font-size: 1.4rem;
-            }
-            .btn-secondary {
-                padding: 14px 24px;
-                font-size: 0.85rem;
-            }
-            .btn-secondary .icon {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-fullscreen {
-                padding: 50px 12px 15px;
-            }
-            .hero-logo {
-                max-width: 98%;
-                max-height: 42vh;
-            }
-            .hero-tagline h2 {
-                font-size: 0.95rem;
-            }
-            .hero-tagline p {
-                font-size: 0.8rem;
-            }
-            .hero-btn {
-                padding: 10px 20px;
-                font-size: 0.85rem;
-            }
-            .hero-tagline .badge {
-                font-size: 0.6rem;
-                padding: 4px 14px;
-            }
-            .card {
-                padding: 20px;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            .gallery-item img {
-                height: 200px;
-            }
-            .card-image {
-                min-height: 180px;
-            }
-            .card-image h3 {
-                font-size: 1.1rem;
-            }
-            .modal-image {
-                height: 160px;
-            }
-            .modal-body {
-                padding: 16px;
-            }
-            .floating-buttons {
-                bottom: 12px;
-                right: 12px;
-                gap: 8px;
-            }
-            .floating-buttons .float-btn {
-                padding: 8px 14px;
-                border-radius: 40px;
-                gap: 6px;
-            }
-            .floating-buttons .float-btn .icon {
-                font-size: 1rem;
-            }
-            .floating-buttons .float-btn .text strong {
-                font-size: 0.7rem;
-            }
-            .floating-buttons .float-btn .text small {
-                display: none;
-            }
-            .contact-section h2 {
-                font-size: 1.5rem;
-            }
-            .contact-section .contact-description {
-                font-size: 0.95rem;
-            }
-            .btn-whatsapp {
-                padding: 14px 24px;
-                font-size: 1rem;
-                gap: 10px;
-            }
-            .btn-whatsapp .icon {
-                font-size: 1.5rem;
-            }
-            .btn-whatsapp .whatsapp-badge-float {
-                font-size: 0.55rem;
-                padding: 3px 10px;
-            }
-            .btn-email {
-                padding: 14px 20px;
-                font-size: 0.9rem;
-                gap: 8px;
-            }
-            .btn-email .icon {
-                font-size: 1.2rem;
-            }
-            .btn-secondary {
-                padding: 12px 18px;
-                font-size: 0.8rem;
-                gap: 6px;
-            }
-            .btn-secondary .icon {
-                font-size: 0.9rem;
-            }
-            .counter-item .info .number {
-                font-size: 1.4rem;
-            }
-            .counter-item .info .label {
-                font-size: 0.7rem;
-            }
-            .counter-item .icon {
-                font-size: 1.3rem;
-                gap: 10px;
-            }
-            .counter-badge {
-                font-size: 0.6rem;
-                padding: 4px 14px;
-            }
-            .counter-item {
-                gap: 10px;
-            }
-            footer {
-                font-size: 0.75rem;
-                padding: 20px 10px;
-            }
-            footer .footer-emails {
-                font-size: 0.7rem;
-            }
-            footer .footer-emails .email-secondary {
-                font-size: 0.7rem;
-            }
+            background: #991B1B;
         }
     </style>
-</head>
-<body>
-
-    <!-- ===== NAVEGACIÓN FIJA ===== -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="photo-removebg-preview.png" alt="INSSO">
-            </a>
-            <div class="nav-links">
-                <a href="#ingenieria">Ingeniería</a>
-                <a href="#seguridad">Seguridad</a>
-                <a href="#pci">PCI</a>
-                <a href="#mantenimiento">Mantenimiento</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#galeria">Galería</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ===== HERO - PANTALLA COMPLETA CON LOGO ===== -->
-    <section class="hero-fullscreen">
-        <div class="hero-logo-wrapper">
-            <img src="photo-removebg-preview.png" 
-                 alt="INSSO - Ingeniería y Seguridad Industrial" 
-                 class="hero-logo">
-        </div>
-        <div class="hero-tagline">
-            <span class="badge">📍 Villeta, Paraguay</span>
-            <h2><span>INGENIERÍA</span> Y <span>CONSULTORÍA</span> DE<br>SEGURIDAD INDUSTRIAL</h2>
-            <p>Soluciones integrales que garantizan tu operatividad y seguridad industrial para la continuidad de tu operación.</p>
-            <a href="#contacto" class="hero-btn">📞 Solicita una Asesoría</a>
-        </div>
-    </section>
-
-    <!-- ===== CONTENIDO ===== -->
-    <div class="content-section">
-        <div class="container">
-
-            <!-- Botones de Redirección -->
-            <div class="branch-selector">
-                <a href="#ingenieria" class="branch-btn">
-                    ⚙️ Servicios de Ingeniería
-                    <span>Electricidad, Mecánica, Refrigeración</span>
-                </a>
-                <a href="#seguridad" class="branch-btn">
-                    🛡️ Consultoría de Seguridad
-                    <span>Normativas SySO, IPERC, Capacitaciones</span>
-                </a>
-                <a href="#pci" class="branch-btn" style="border-color: #DC2626;">
-                    🔥 PCI y Mantenimiento
-                    <span>Protección Contra Incendios, BIE, Extintores</span>
-                </a>
-            </div>
-
-            <!-- ===== INGENIERÍA ===== -->
-            <div class="section-header" id="ingenieria">
-                <h2>⚡ Servicios de Ingeniería y Mantenimiento</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="card card-image" onclick="openModal('electricidad')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop" alt="Electricidad industrial">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>⚡ Electricidad Industrial</h3>
-                        <p>Diagnóstico, instalación y mantenimiento de tableros eléctricos, sistemas de potencia y líneas industriales.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('mecanica')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" alt="Mantenimiento mecánico">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>⚙️ Mantenimiento Mecánico</h3>
-                        <p>Gestión integral de compresores, bombas industriales y reducción de fallas críticas en planta.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('refrigeracion')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop" alt="Refrigeración industrial">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>❄️ Refrigeración Industrial</h3>
-                        <p>Sistemas Chiller, aire acondicionado industrial, detección y recarga de fugas de gas.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== SEGURIDAD ===== -->
-            <div class="section-header safety" id="seguridad">
-                <h2>🛡️ Consultoría y Gestión Integral SySO</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="card card-image" onclick="openModal('seguridad-ocupacional')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&h=400&fit=crop" alt="Seguridad ocupacional">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>🛡️ Seguridad Ocupacional</h3>
-                        <p>Matrices IPERC, planes de emergencia, auditorías y asesorías en seguridad industrial.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('capacitaciones')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=600&h=400&fit=crop" alt="Capacitaciones">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>🎓 Capacitaciones Técnicas</h3>
-                        <p>EPP, LOTO, trabajos en altura, espacios confinados, combate de incendio y más.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('brigadas')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=400&fit=crop" alt="Brigadas de emergencia">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h3>🚒 Brigadas y Simulacros</h3>
-                        <p>Entrenamiento de brigadas de emergencia, RCP, DEA, evacuación, control de incendios y simulacros.</p>
-                        <span class="click-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== PCI ===== -->
-            <div class="section-header pci" id="pci">
-                <h2>🔥 PCI - Protección Contra Incendios</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="card card-pci" onclick="openModal('deteccion')">
-                    <div class="content">
-                        <h3>🚨 Sistemas de Detección y Alarma</h3>
-                        <ul>
-                            <li>Detectores de humo y calor</li>
-                            <li>Centrales de alarma inteligentes</li>
-                            <li>Sistemas de evacuación sonora</li>
-                            <li>Panel de control y monitoreo</li>
-                            <li>Integración con sistemas existentes</li>
-                        </ul>
-                        <span class="badge-fire">👆 Ver más</span>
-                    </div>
-                </div>
-
-                <div class="card card-pci" onclick="openModal('rociadores')">
-                    <div class="content">
-                        <h3>💧 Rociadores Automáticos (NFPA 13)</h3>
-                        <ul>
-                            <li>Diseño e instalación de sistemas</li>
-                            <li>Mantenimiento y verificación</li>
-                            <li>Pruebas de presión y flujo</li>
-                            <li>Reparación de cabezales</li>
-                            <li>Cumplimiento de normativas</li>
-                        </ul>
-                        <span class="badge-fire">👆 Ver más</span>
-                    </div>
-                </div>
-
-                <div class="card card-pci" onclick="openModal('hidrantes')">
-                    <div class="content">
-                        <h3>🚒 Hidrantes y Extintores</h3>
-                        <ul>
-                            <li>Instalación de hidrantes (BIE)</li>
-                            <li>Mantenimiento de extintores</li>
-                            <li>Recarga de extintores</li>
-                            <li>Pruebas hidrostáticas</li>
-                            <li>Señalización y accesibilidad</li>
-                        </ul>
-                        <span class="badge-fire">👆 Ver más</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== MANTENIMIENTO ===== -->
-            <div class="section-header mantenimiento" id="mantenimiento">
-                <h2>🔧 Mantenimiento Especializado PCI</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="card card-image" onclick="openModal('mantenimiento-pci')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=400&fit=crop" alt="Mantenimiento PCI">
-                    <div class="overlay overlay-fire"></div>
-                    <div class="content">
-                        <h3>🔧 Mantenimiento de Equipos PCI</h3>
-                        <p>Verificación y mantenimiento de sistemas contra incendio, extintores, BIE, rociadores y más.</p>
-                        <span class="click-hint fire-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('verificacion')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&h=400&fit=crop" alt="Verificación de sistemas">
-                    <div class="overlay overlay-fire"></div>
-                    <div class="content">
-                        <h3>📋 Verificación y Certificación</h3>
-                        <p>Inspecciones técnicas, certificación de equipos, pruebas de funcionamiento y cumplimiento normativo.</p>
-                        <span class="click-hint fire-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-
-                <div class="card card-image" onclick="openModal('inspeccion')">
-                    <img class="bg-image" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop" alt="Inspección de sistemas">
-                    <div class="overlay overlay-fire"></div>
-                    <div class="content">
-                        <h3>🔍 Inspecciones Técnicas</h3>
-                        <p>Inspección visual, pruebas de flujo, verificación de presión, señalización y accesibilidad.</p>
-                        <span class="click-hint fire-hint">👆 Haz clic para más info</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== OTROS SERVICIOS ===== -->
-            <div class="section-header otros" id="servicios">
-                <h2>📋 Otros Servicios Especializados</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="card">
-                    <h3>📄 Gestión Documental</h3>
-                    <ul>
-                        <li>Documentación para el MTESS</li>
-                        <li>Conformación de CIPA</li>
-                        <li>Gestión ISO 9001, 45001</li>
-                        <li>Evaluación de riesgos laborales</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>🧯 Sistemas Contra Incendio</h3>
-                    <ul>
-                        <li>Control de sistema de prevención de incendio</li>
-                        <li>Verificación y mantenimiento de sistema contra incendio (BIE)</li>
-                        <li>Verificación de extintores</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>📊 Mediciones y Verificaciones</h3>
-                    <ul>
-                        <li>Medición de ruido, iluminación y ambiental</li>
-                        <li>Elaboración de check list:
-                            <small>• Montacargas • Tablero eléctrico • Generador • EPP</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- ===== GALERÍA ===== -->
-            <div class="section-header galeria" id="galeria">
-                <h2>📸 Nuestro Trabajo en Empresas</h2>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('electricidad')">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop" alt="Instalación eléctrica">
-                    <div class="caption">⚡ Instalación Eléctrica <span class="view-icon">Ver</span></div>
-                </div>
-
-                <div class="gallery-item" onclick="openModal('mecanica')">
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" alt="Mantenimiento de maquinaria">
-                    <div class="caption">⚙️ Mantenimiento <span class="view-icon">Ver</span></div>
-                </div>
-
-                <div class="gallery-item" onclick="openModal('capacitaciones')">
-                    <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=600&h=400&fit=crop" alt="Trabajo en altura">
-                    <div class="caption">🪜 Trabajos en Altura <span class="view-icon">Ver</span></div>
-                </div>
-
-                <div class="gallery-item" onclick="openModal('brigadas')">
-                    <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=400&fit=crop" alt="Equipo de seguridad">
-                    <div class="caption">🛡️ Seguridad Industrial <span class="view-icon">Ver</span></div>
-                </div>
-
-                <div class="gallery-item" onclick="openModal('deteccion')">
-                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&h=400&fit=crop" alt="Sistema contra incendio">
-                    <div class="caption">🔥 Sistema PCI <span class="view-icon">Ver</span></div>
-                </div>
-
-                <div class="gallery-item" onclick="openModal('mantenimiento-pci')">
-                    <img src="https://images.unsplash.com/photo-1581092160607-ee2c6e8d6d6c?w=600&h=400&fit=crop" alt="Mantenimiento industrial">
-                    <div class="caption">🔧 Mantenimiento PCI <span class="view-icon">Ver</span></div>
-                </div>
-            </div>
-
-            <!-- ===== COMPLIANCE ===== -->
-            <div class="compliance-box">
-                <h4>⚠️ Protege a tus trabajadores y evita multas</h4>
-                <p>¿Tu empresa cumple las normas SySO? Asegura el marco normativo legal en Paraguay:</p>
-                <ul>
-                    <li>Evaluaciones de Riesgo Profesional homologadas.</li>
-                    <li>Planes de Emergencia y Contingencia presentados ante el MTESS.</li>
-                    <li>Cumplimiento estricto de la Legislación Laboral de Seguridad.</li>
-                    <li>Asesorías aplicadas para adecuación legal ante el MADES.</li>
-                    <li>Normas NFPA para sistemas contra incendio.</li>
-                </ul>
-            </div>
-
-            <!-- ===== CONTADOR ===== -->
-            <div class="counter-section">
-                <div class="counter-item">
-                    <span class="icon">👁️</span>
-                    <div class="info">
-                        <span class="number" id="visitCounter">0</span>
-                        <span class="label">Visitas a la página</span>
-                    </div>
-                </div>
-                <div class="counter-divider"></div>
-                <div class="counter-item">
-                    <span class="icon">🏆</span>
-                    <div class="info">
-                        <span class="number"><span id="clientCounter">0</span>+</span>
-                        <span class="label">Clientes satisfechos</span>
-                    </div>
-                </div>
-                <div class="counter-divider"></div>
-                <div class="counter-item">
-                    <span class="icon">⭐</span>
-                    <div class="info">
-                        <span class="number"><span id="projectCounter">0</span>+</span>
-                        <span class="label">Proyectos realizados</span>
-                    </div>
-                </div>
-                <span class="counter-badge">🚀 En crecimiento</span>
-            </div>
-
-            <!-- ===== CONTACTO ===== -->
-            <section class="contact-section" id="contacto">
-                <span class="contact-highlight">📞 Atención 24/7</span>
-                <h2>¿Listo para <span>mejorar</span> tu empresa?</h2>
-                <p class="contact-description">
-                    Solicita una evaluación técnica gratuita. Nuestros especialistas en ingeniería y seguridad industrial te ayudarán a optimizar tus procesos y proteger a tus trabajadores.
-                </p>
-
-                <div style="margin: 20px auto 35px; padding: 20px 30px; background: rgba(255,255,255,0.08); border-radius: 16px; max-width: 550px; border: 2px solid rgba(243, 91, 4, 0.3); box-shadow: 0 0 30px rgba(243, 91, 4, 0.05);">
-                    <p style="color: #94A3B8; font-size: 0.75rem; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 2px;">📧 Correo principal</p>
-                    <a href="mailto:insso_consultora@outlook.com?subject=Consulta%20sobre%20servicios%20INSSO&body=Hola,%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20INSSO.%20Me%20gustaría%20recibir%20información%20sobre:%0A%0A- Servicios de ingeniería%0A- Consultoría de seguridad%0A- Capacitaciones%0A- Protección contra incendios%0A%0AQuedo atento a su respuesta.%0A%0ASaludos." 
-                       style="color: #FCA5A5; font-size: 1.6rem; font-weight: 800; text-decoration: none; transition: all 0.3s ease; letter-spacing: 0.5px; display: inline-block; word-break: break-all;"
-                       onmouseover="this.style.color='#F35B04'; this.style.transform='scale(1.05)'" 
-                       onmouseout="this.style.color='#FCA5A5'; this.style.transform='scale(1)'">
-                        ✉️ insso_consultora@outlook.com
-                    </a>
-                    <div style="margin-top: 8px;">
-                        <span style="display: inline-block; background: rgba(243, 91, 4, 0.15); color: var(--accent); padding: 2px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(243, 91, 4, 0.2);">
-                            ⚡ Contacto directo
-                        </span>
-                    </div>
-                </div>
-
-                <div class="btn-container">
-                    <a href="https://wa.me/595992311266?text=Hola%20INSSO,%20quiero%20solicitar%20una%20asesoría%20técnica"
-                       class="btn-whatsapp"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <span class="icon">💬</span>
-                        <span>WhatsApp</span>
-                        <span class="whatsapp-badge-float">¡CLIC AQUÍ!</span>
-                    </a>
-                    <a href="mailto:insso_consultora@outlook.com?subject=Consulta%20sobre%20servicios%20INSSO&body=Hola,%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20INSSO.%20Me%20gustaría%20recibir%20información%20sobre:%0A%0A- Servicios de ingeniería%0A- Consultoría de seguridad%0A- Capacitaciones%0A- Protección contra incendios%0A%0AQuedo atento a su respuesta.%0A%0ASaludos."
-                       class="btn-email"
-                       style="background: #134074; border: 2px solid rgba(255,255,255,0.1);">
-                        <span class="icon">✉️</span>
-                        Correo Principal
-                    </a>
-                    <a href="mailto:pintosingenieria@gmail.com" class="btn-secondary">
-                        <span class="icon">📧</span>
-                        Secundario: pintosingenieria@gmail.com
-                    </a>
-                </div>
-            </section>
-
-            <!-- ===== FOOTER ===== -->
-            <footer>
-                <p>&copy; 2026 INSSO Soluciones Industriales. Todos los derechos reservados. | Villeta, Paraguay</p>
-                <div class="footer-emails">
-                    📧 <a href="mailto:insso_consultora@outlook.com?subject=Consulta%20sobre%20servicios%20INSSO&body=Hola,%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20INSSO.%20Me%20gustaría%20recibir%20información%20sobre:%0A%0A- Servicios de ingeniería%0A- Consultoría de seguridad%0A- Capacitaciones%0A- Protección contra incendios%0A%0AQuedo atento a su respuesta.%0A%0ASaludos." class="email-primary">insso_consultora@outlook.com</a>
-                    <span class="separator">|</span>
-                    <a href="mailto:pintosingenieria@gmail.com" class="email-secondary">pintosingenieria@gmail.com</a>
-                </div>
-                <div class="footer-analytics">
-                    📊 Este sitio usa <strong>Google Analytics</strong> para mejorar tu experiencia
-                </div>
-            </footer>
-
-        </div>
-    </div>
-
-    <!-- ===== BOTONES FLOTANTES ===== -->
-    <div class="floating-buttons">
-        <a href="https://wa.me/595992311266?text=Hola%20INSSO,%20quiero%20solicitar%20una%20asesoría%20técnica"
-           class="float-btn whatsapp-btn"
-           target="_blank"
-           rel="noopener noreferrer">
-            <span class="icon">💬</span>
-            <span class="text">
-                <strong>WhatsApp</strong>
-                <small>0992 311 266</small>
-            </span>
-            <span class="badge">¡Contáctanos!</span>
-        </a>
-
-        <a href="mailto:insso_consultora@outlook.com?subject=Consulta%20sobre%20servicios%20INSSO&body=Hola,%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20INSSO.%20Me%20gustaría%20recibir%20información%20sobre:%0A%0A- Servicios de ingeniería%0A- Consultoría de seguridad%0A- Capacitaciones%0A- Protección contra incendios%0A%0AQuedo atento a su respuesta.%0A%0ASaludos."
-           class="float-btn email-btn"
-           target="_blank"
-           rel="noopener noreferrer">
-            <span class="icon">✉️</span>
-            <span class="text">
-                <strong>Correo</strong>
-                <small>insso_consultora</small>
-            </span>
-        </a>
-    </div>
-
-    <!-- ===== MODAL ===== -->
-    <div class="modal-overlay" id="modal" onclick="if(event.target===this) closeModal()">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">✕</button>
-            <img class="modal-image" id="modalImage" src="" alt="Detalle del servicio">
-            <div class="modal-body">
-                <h2 id="modalTitle"></h2>
-                <span class="modal-subtitle" id="modalSubtitle"></span>
-                <p id="modalDescription"></p>
-                <ul id="modalList"></ul>
-                <a href="#contacto" class="modal-btn" onclick="closeModal()">📞 Solicita una Asesoría</a>
-            </div>
-        </div>
-    </div>
 
     <script>
-        // ===== CONTADOR DE VISITAS =====
-        function updateCounter() {
-            let visits = localStorage.getItem('inssso_visits');
-            if (visits === null) visits = 0;
-            visits = parseInt(visits) + 1;
-            localStorage.setItem('inssso_visits', visits);
-            const counterElement = document.getElementById('visitCounter');
-            animateNumber(counterElement, 0, visits, 1500);
-        }
-
-        function animateNumber(element, start, end, duration) {
-            const startTime = performance.now();
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.round(start + (end - start) * eased);
-                element.textContent = current.toLocaleString();
-                if (progress < 1) requestAnimationFrame(update);
-                else element.textContent = end.toLocaleString();
-            }
-            requestAnimationFrame(update);
-        }
-
-        function initCounters() {
-            animateNumber(document.getElementById('clientCounter'), 0, 156, 2000);
-            animateNumber(document.getElementById('projectCounter'), 0, 89, 2000);
-        }
-
         // ===== DATOS DE SERVICIOS =====
         const serviceData = {
             'electricidad': {
@@ -2121,54 +1019,12 @@
                 description: 'Formamos a tu personal en las mejores prácticas de seguridad industrial, garantizando que estén preparados para prevenir y responder ante situaciones de riesgo.',
                 list: ['🧯 Combate de incendio', '🚑 Primeros auxilios y RCP', '🏃 Evacuación y planes de contingencia', '📋 Gestión de las 5S', '🦺 Uso y selección de EPP', '🏗️ Manejo seguro de montacargas', '⚠️ Trabajos en altos riesgos (altura, espacios confinados, eléctrico)', '🔒 Bloqueo y etiquetado (LOTO)', '☣️ Materiales peligrosos']
             },
-            'brigadas': {
-                title: '🚒 Brigadas y Simulacros',
-                subtitle: 'Preparación para emergencias reales',
-                image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&h=500&fit=crop',
-                description: 'Entrenamos a tu personal para conformar brigadas de emergencia altamente capacitadas, realizando simulacros con evaluación real.',
-                list: ['Entrenamiento en primeros auxilios avanzados (RCP/DEA)', 'Tácticas operativas de evacuación rápida', 'Control de incendios y uso de extintores', 'Simulacros programados con evaluación real', 'Conformación de brigadas de emergencia', 'Coordinación con bomberos locales', 'Equipamiento para brigadistas']
-            },
             'deteccion': {
-                title: '🚨 Sistemas de Detección y Alarma',
-                subtitle: 'Protección temprana contra incendios',
+                title: '🔥 Protección Contra Incendios',
+                subtitle: 'Sistemas de detección, rociadores y mantenimiento PCI',
                 image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=500&fit=crop',
-                description: 'Instalamos sistemas de detección y alarma de última generación que permiten una respuesta rápida ante cualquier conato de incendio.',
-                list: ['Detectores de humo y calor (NFPA 72)', 'Centrales de alarma inteligentes con monitoreo', 'Sistemas de evacuación sonora y visual', 'Panel de control y monitoreo remoto', 'Integración con sistemas existentes', 'Mantenimiento y pruebas periódicas', 'Cumplimiento de normativas locales']
-            },
-            'rociadores': {
-                title: '💧 Rociadores Automáticos (NFPA 13)',
-                subtitle: 'Sistemas de extinción automática',
-                image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&h=500&fit=crop',
-                description: 'Diseñamos e instalamos sistemas de rociadores automáticos que cumplen con la normativa NFPA 13, garantizando una protección efectiva contra incendios.',
-                list: ['Diseño e instalación de sistemas de rociadores', 'Mantenimiento y verificación periódica', 'Pruebas de presión y flujo de agua', 'Reparación y reemplazo de cabezales', 'Sistemas de tuberías y bombas contra incendio', 'Cumplimiento de normativas internacionales', 'Certificación y documentación técnica']
-            },
-            'hidrantes': {
-                title: '🚒 Hidrantes y Extintores',
-                subtitle: 'Equipos portátiles contra incendio',
-                image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&h=500&fit=crop',
-                description: 'Proveemos y mantenemos equipos portátiles contra incendio como hidrantes (BIE) y extintores, garantizando su operatividad en caso de emergencia.',
-                list: ['Instalación de hidrantes (BIE) con mangueras', 'Mantenimiento preventivo y correctivo de extintores', 'Recarga de extintores (ABC, CO2, espuma)', 'Pruebas hidrostáticas de extintores', 'Señalización y accesibilidad de equipos', 'Capacitación en uso de extintores', 'Certificación de equipos']
-            },
-            'mantenimiento-pci': {
-                title: '🔧 Mantenimiento de Equipos PCI',
-                subtitle: 'Aseguramiento de sistemas contra incendio',
-                image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&h=500&fit=crop',
-                description: 'Realizamos mantenimiento especializado de todos los sistemas de protección contra incendio, garantizando su operatividad y cumplimiento de normativas.',
-                list: ['Mantenimiento de sistemas de rociadores', 'Verificación de bombas contra incendio', 'Mantenimiento de hidrantes y BIE', 'Revisión de extintores y recarga', 'Pruebas de sistemas de detección y alarma', 'Limpieza y ajuste de componentes', 'Registro y documentación de mantenimiento']
-            },
-            'verificacion': {
-                title: '📋 Verificación y Certificación',
-                subtitle: 'Aseguramiento de calidad y cumplimiento',
-                image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=500&fit=crop',
-                description: 'Realizamos verificaciones técnicas y certificación de todos los sistemas PCI, asegurando su correcto funcionamiento y cumplimiento de normativas legales.',
-                list: ['Inspecciones técnicas de sistemas PCI', 'Certificación de equipos contra incendio', 'Pruebas de funcionamiento de sistemas', 'Verificación de presiones y caudales', 'Revisión de documentación técnica', 'Informes técnicos detallados', 'Cumplimiento de normativas NFPA y locales']
-            },
-            'inspeccion': {
-                title: '🔍 Inspecciones Técnicas PCI',
-                subtitle: 'Evaluación profesional de sistemas',
-                image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&h=500&fit=crop',
-                description: 'Realizamos inspecciones técnicas exhaustivas de todos los sistemas de protección contra incendio, identificando áreas de mejora y garantizando su operatividad.',
-                list: ['Inspección visual de equipos PCI', 'Pruebas de flujo y presión', 'Verificación de señalización y accesibilidad', 'Revisión de sistemas de detección', 'Evaluación de bombas contra incendio', 'Informe detallado con recomendaciones', 'Plan de acción correctivo']
+                description: 'Instalamos y mantenemos sistemas de protección contra incendios de última generación, garantizando la seguridad de tu planta.',
+                list: ['🚨 Detectores de humo y calor (NFPA 72)', '💧 Rociadores automáticos (NFPA 13)', '🚒 Hidrantes y extintores', 'Centrales de alarma inteligentes', 'Mantenimiento y pruebas periódicas', 'Cumplimiento de normativas locales e internacionales']
             }
         };
 
@@ -2191,12 +1047,10 @@
                 listContainer.appendChild(li);
             });
             const modalBtn = document.querySelector('.modal-btn');
-            if (serviceId === 'deteccion' || serviceId === 'rociadores' || serviceId === 'hidrantes' || serviceId === 'mantenimiento-pci' || serviceId === 'verificacion' || serviceId === 'inspeccion') {
+            if (serviceId === 'deteccion') {
                 modalBtn.classList.add('fire-btn');
-                document.getElementById('modalSubtitle').classList.add('fire-sub');
             } else {
                 modalBtn.classList.remove('fire-btn');
-                document.getElementById('modalSubtitle').classList.remove('fire-sub');
             }
             document.getElementById('modal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -2211,9 +1065,36 @@
             if (e.key === 'Escape') closeModal();
         });
 
+        // ===== CONTADORES ANIMADOS =====
         document.addEventListener('DOMContentLoaded', function() {
-            updateCounter();
-            initCounters();
+            const counters = [
+                { id: 'yearsCounter', target: 10 },
+                { id: 'clientsCounter', target: 150 },
+                { id: 'projectsCounter', target: 89 }
+            ];
+
+            counters.forEach(counter => {
+                const el = document.getElementById(counter.id);
+                if (!el) return;
+                const text = el.textContent;
+                const isPlus = text.includes('+');
+                const start = 0;
+                const end = counter.target;
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.round(start + (end - start) * eased);
+                    el.textContent = current + (isPlus ? '+' : '');
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                requestAnimationFrame(update);
+            });
         });
     </script>
 
