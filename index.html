@@ -45,6 +45,33 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- ===== DATOS ESTRUCTURADOS PARA SEO LOCAL ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "INSSO Soluciones Industriales",
+      "description": "Empresa especializada en ingeniería, electricidad industrial, mantenimiento mecánico, refrigeración y seguridad industrial (SySO).",
+      "url": "https://insso-ingenieria.netlify.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Villeta",
+        "addressRegion": "Central",
+        "addressCountry": "PY"
+      },
+      "areaServed": "Paraguay",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -25.5081,
+          "longitude": -57.5683
+        },
+        "radius": "50000"
+      }
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* ===== VARIABLES ===== */
@@ -106,43 +133,16 @@
             text-decoration: none;
         }
 
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, #F35B04, #FF7A2F);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 900;
-            color: white;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(243, 91, 4, 0.3);
-            position: relative;
+        /* ===== LOGO CON IMAGEN ===== */
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
 
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            right: 4px;
-            width: 8px;
-            height: 8px;
-            background: #0B2545;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: 1px;
-        }
-
-        .logo-text span {
-            color: var(--accent);
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -1486,13 +1486,8 @@
             .floating-buttons .whatsapp-btn::before {
                 display: none;
             }
-            .logo-icon {
-                width: 35px;
-                height: 35px;
-                font-size: 18px;
-            }
-            .logo-text {
-                font-size: 1.2rem;
+            .logo img {
+                height: 40px;
             }
             .card-image {
                 min-height: 220px;
@@ -1679,8 +1674,7 @@
     <nav>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">I</div>
-                <div class="logo-text">INSSO<span>.</span></div>
+                <img src="Gemini_Generated_Image_taijrftaijrftaij.png" alt="INSSO - Ingeniería y Seguridad Industrial">
             </a>
             <div class="nav-links">
                 <a href="#ingenieria">Ingeniería</a>
@@ -2011,7 +2005,7 @@
             <span class="contact-highlight">📞 Atención 24/7</span>
             <h2>¿Listo para <span>mejorar</span> tu empresa?</h2>
             <p class="contact-description">
-                Solicita una evaluación técnica gratuita. Nuestros especialistas en ingeniería                y seguridad industrial te ayudarán a optimizar tus procesos y proteger a tus trabajadores.
+                Solicita una evaluación técnica gratuita. Nuestros especialistas en ingeniería y seguridad industrial te ayudarán a optimizar tus procesos y proteger a tus trabajadores.
             </p>
 
             <!-- ===== CORREO PRINCIPAL DESTACADO ===== -->
