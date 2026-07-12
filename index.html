@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- ===== FAVICON - LOGO EN PESTAÑA Y GOOGLE ===== -->
-    <link rel="icon" type="image/png" href="photo-removebg-preview.png" />
-    <link rel="apple-touch-icon" href="photo-removebg-preview.png" />
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B2545'/%3E%3Ctext x='50' y='68' font-family='Arial, sans-serif' font-size='60' font-weight='900' fill='%23F35B04' text-anchor='middle'%3EI%3C/text%3E%3C/svg%3E" />
     
     <!-- ===== VERIFICACIÓN DE GOOGLE ===== -->
     <meta name="google-site-verification" content="YCJLRrF_Z0CSg3QFkUFsz9XsP0reUq94qknr-BEZAl4" />
     <meta name="google-site-verification" content="google130dfdc9cb03b0fb" />
     
-    <!-- ===== TÍTULO OPTIMIZADO PARA GOOGLE ===== -->
-    <title>INSSO INGENIERÍA Y CONSULTORÍA | Seguridad Industrial en Villeta, Paraguay</title>
+    <!-- ===== TÍTULO ===== -->
+    <title>INSSO | Ingeniería y Consultoría en Seguridad Industrial - Villeta, Paraguay</title>
     
-    <!-- ===== META DESCRIPCIÓN OPTIMIZADA ===== -->
+    <!-- ===== META DESCRIPCIÓN ===== -->
     <meta name="description" content="INSSO: Soluciones en ingeniería y seguridad industrial en Villeta, Paraguay. Electricidad, mantenimiento mecánico, refrigeración, capacitaciones SySO y protección contra incendios. ¡Cotiza ahora!" />
     
     <meta name="keywords" content="INSSO, seguridad industrial Paraguay, ingeniería Villeta, consultoría SySO, electricidad industrial, mantenimiento mecánico, refrigeración industrial, protección contra incendios, capacitaciones laborales" />
@@ -24,46 +26,21 @@
     
     <meta name="robots" content="index, follow" />
     
-    <meta property="og:title" content="INSSO INGENIERÍA Y CONSULTORÍA | Seguridad Industrial en Villeta, Paraguay" />
+    <meta property="og:title" content="INSSO | Ingeniería y Consultoría en Seguridad Industrial - Villeta, Paraguay" />
     <meta property="og:description" content="Soluciones en ingeniería y seguridad industrial. Electricidad, mantenimiento, refrigeración, SySO y protección contra incendios." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/" />
     <meta property="og:image" content="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/photo-removebg-preview.png" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="INSSO INGENIERÍA Y CONSULTORÍA | Seguridad Industrial en Villeta" />
+    <meta name="twitter:title" content="INSSO | Ingeniería y Consultoría en Seguridad Industrial - Villeta" />
     <meta name="twitter:description" content="Soluciones en ingeniería y seguridad industrial en Paraguay." />
     <meta name="twitter:image" content="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/photo-removebg-preview.png" />
     
     <link rel="canonical" href="https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/" />
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "INSSO Ingeniería y Consultoría",
-      "description": "Empresa especializada en ingeniería, electricidad industrial, mantenimiento mecánico, refrigeración y seguridad industrial (SySO).",
-      "url": "https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/",
-      "image": "https://insso-ing.github.io/Insso-ingenier-a-y-consultor-a-/photo-removebg-preview.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Villeta",
-        "addressRegion": "Central",
-        "addressCountry": "PY"
-      },
-      "areaServed": "Paraguay"
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         /* ===== VARIABLES ===== */
         :root {
@@ -77,6 +54,7 @@
             --text-muted: #64748B;
             --white: #ffffff;
             --radius: 16px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         * {
@@ -99,7 +77,68 @@
             padding: 0 20px;
         }
 
-        /* ===== NAVEGACIÓN FIJA ===== */
+        /* ===== SPLASH SCREEN ===== */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0B2545;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #splash-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #splash-screen .splash-logo {
+            width: 200px;
+            max-width: 40vw;
+            height: auto;
+            animation: splashPulse 1.5s ease-in-out infinite;
+            filter: brightness(0) invert(1);
+        }
+
+        #splash-screen .splash-text {
+            margin-top: 20px;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            opacity: 0.8;
+        }
+
+        #splash-screen .splash-text span {
+            color: #F35B04;
+        }
+
+        #splash-screen .splash-loader {
+            margin-top: 20px;
+            width: 45px;
+            height: 45px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #F35B04;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes splashPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+
+        /* ===== NAVEGACIÓN ===== */
         nav {
             background: rgba(11, 37, 69, 0.95);
             padding: 10px 0;
@@ -130,12 +169,10 @@
         }
 
         .logo img {
-            height: 42px;
+            height: 40px;
             width: auto;
-            border-radius: 0;
-            transition: transform 0.3s ease;
-            background: transparent;
             filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
         }
 
         .logo img:hover {
@@ -144,7 +181,7 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
         }
 
         .nav-links a {
@@ -154,12 +191,29 @@
             font-weight: 500;
             transition: color 0.3s ease;
             padding: 6px 0;
+            position: relative;
         }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         .nav-links a:hover {
             color: var(--accent);
         }
 
-        /* ===== HERO - PANTALLA COMPLETA CON LOGO ===== */
+        /* ===== HERO ===== */
         .hero-fullscreen {
             min-height: 100vh;
             min-height: 100dvh;
@@ -185,7 +239,19 @@
             z-index: 1;
         }
 
-        /* === LOGO GIGANTE - SIN FONDO === */
+        /* Fondo decorativo */
+        .hero-fullscreen::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(243, 91, 4, 0.04), transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
         .hero-logo-wrapper {
             display: flex;
             justify-content: center;
@@ -196,15 +262,17 @@
             padding: 10px;
             flex: 1;
             animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-logo {
             width: 100%;
-            max-width: 900px;
+            max-width: 800px;
             height: auto;
-            max-height: 70vh;
+            max-height: 65vh;
             object-fit: contain;
-            filter: drop-shadow(0 20px 60px rgba(11, 37, 69, 0.15));
+            filter: drop-shadow(0 20px 60px rgba(11, 37, 69, 0.12));
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             border-radius: 0;
             background: transparent;
@@ -215,11 +283,12 @@
             transform: scale(1.02);
         }
 
-        /* === TEXTO DEBAJO DEL LOGO === */
         .hero-tagline {
             margin-top: 5px;
             padding-bottom: 10px;
             animation: fadeInUp 1.2s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-tagline .badge {
@@ -266,6 +335,8 @@
             font-size: 1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(243, 91, 4, 0.3);
+            position: relative;
+            z-index: 1;
         }
 
         .hero-btn:hover {
@@ -274,7 +345,6 @@
             box-shadow: 0 8px 30px rgba(243, 91, 4, 0.4);
         }
 
-        /* ===== ANIMACIONES ===== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -286,7 +356,6 @@
             }
         }
 
-        /* ===== SECCIÓN DE CONTENIDO ===== */
         .content-section {
             background: var(--bg);
             padding: 40px 0 20px;
@@ -317,13 +386,16 @@
             font-weight: 700;
             font-size: 1.2rem;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
+
         .branch-btn:hover {
             background: var(--primary);
             color: var(--white);
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(11, 37, 69, 0.15);
+            box-shadow: 0 8px 30px rgba(11, 37, 69, 0.15);
         }
+
         .branch-btn span {
             display: block;
             font-size: 0.9rem;
@@ -331,6 +403,7 @@
             color: var(--text-muted);
             margin-top: 6px;
         }
+
         .branch-btn:hover span {
             color: #cbd5e1;
         }
@@ -343,15 +416,19 @@
             border-radius: var(--radius);
             margin: 60px 0 30px;
             text-align: center;
+            box-shadow: var(--shadow);
         }
+
         .section-header.safety {
             background: #CC4E02;
         }
+
         .section-header.pci {
             background: linear-gradient(135deg, #991B1B, #DC2626);
             position: relative;
             overflow: hidden;
         }
+
         .section-header.pci::before {
             content: '🔥';
             position: absolute;
@@ -361,6 +438,7 @@
             font-size: 2.5rem;
             animation: fire-flicker 0.5s ease-in-out infinite alternate;
         }
+
         .section-header.pci::after {
             content: '🧯';
             position: absolute;
@@ -370,12 +448,15 @@
             font-size: 2.5rem;
             animation: fire-flicker 0.7s ease-in-out infinite alternate;
         }
+
         .section-header.mantenimiento {
             background: #0B6E4F;
         }
+
         .section-header.otros {
             background: #0B6E4F;
         }
+
         .section-header.galeria {
             background: #134074;
         }
@@ -405,10 +486,12 @@
             border-radius: var(--radius);
             border: 1px solid #E2E8F0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow);
         }
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
         }
 
         .card h3 {
@@ -423,6 +506,7 @@
         .card ul {
             list-style: none;
         }
+
         .card ul li {
             margin-bottom: 8px;
             font-size: 0.95rem;
@@ -430,6 +514,7 @@
             position: relative;
             color: #334155;
         }
+
         .card ul li::before {
             content: "✓";
             color: var(--accent);
@@ -437,6 +522,7 @@
             left: 0;
             font-weight: bold;
         }
+
         .card ul li small {
             display: block;
             font-size: 0.8rem;
@@ -538,6 +624,7 @@
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .card-pci::before {
@@ -574,6 +661,7 @@
         .card-pci ul {
             list-style: none;
         }
+
         .card-pci ul li {
             color: rgba(255, 255, 255, 0.85);
             margin-bottom: 6px;
@@ -581,6 +669,7 @@
             padding-left: 24px;
             position: relative;
         }
+
         .card-pci ul li::before {
             content: "🔥";
             color: var(--fire);
@@ -1163,93 +1252,133 @@
             font-size: 1.2rem;
         }
 
-        /* ===== CONTADOR ===== */
-        .counter-section {
+        /* ===== REDES SOCIALES - CON LOGOS REALES ===== */
+        .social-section {
             background: var(--white);
-            padding: 35px 30px;
+            padding: 35px 20px;
             border-radius: var(--radius);
             text-align: center;
-            margin: 60px 0 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            margin: 40px 0 30px;
             border: 1px solid #E2E8F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
 
-        .counter-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .counter-item .icon {
-            font-size: 2.2rem;
-            animation: pulse-icon 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-icon {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        .counter-item .info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .counter-item .info .number {
-            font-size: 2.5rem;
-            font-weight: 900;
+        .social-section h3 {
             color: var(--primary);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+            font-weight: 800;
         }
 
-        .counter-item .info .number span {
+        .social-section h3 span {
             color: var(--accent);
         }
 
-        .counter-item .info .label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .counter-divider {
-            width: 2px;
-            height: 60px;
-            background: #E2E8F0;
-        }
-
-        .counter-badge {
-            background: linear-gradient(135deg, var(--accent), #d44f04);
-            color: white;
-            padding: 8px 24px;
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
             border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            animation: pulse-badge 1.5s ease-in-out infinite;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid #E2E8F0;
+            color: var(--text-main);
+            background: var(--white);
         }
 
-        @keyframes pulse-badge {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.8;
-            }
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a .icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a .icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Colores de redes sociales */
+        .social-links .facebook {
+            color: #1877F2;
+            border-color: rgba(24, 119, 242, 0.2);
+        }
+        .social-links .facebook:hover {
+            background: #1877F2;
+            color: white;
+            border-color: #1877F2;
+        }
+        .social-links .facebook:hover .icon svg {
+            fill: white;
+        }
+
+        .social-links .instagram {
+            color: #E4405F;
+            border-color: rgba(228, 64, 95, 0.2);
+        }
+        .social-links .instagram:hover {
+            background: #E4405F;
+            color: white;
+            border-color: #E4405F;
+        }
+        .social-links .instagram:hover .icon svg {
+            fill: white;
+        }
+
+        .social-links .tiktok {
+            color: #010101;
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+        .social-links .tiktok:hover {
+            background: #010101;
+            color: white;
+            border-color: #010101;
+        }
+        .social-links .tiktok:hover .icon svg {
+            fill: white;
+        }
+
+        .social-links .youtube {
+            color: #FF0000;
+            border-color: rgba(255, 0, 0, 0.2);
+        }
+        .social-links .youtube:hover {
+            background: #FF0000;
+            color: white;
+            border-color: #FF0000;
+        }
+        .social-links .youtube:hover .icon svg {
+            fill: white;
+        }
+
+        .social-links .linkedin {
+            color: #0A66C2;
+            border-color: rgba(10, 102, 194, 0.2);
+        }
+        .social-links .linkedin:hover {
+            background: #0A66C2;
+            color: white;
+            border-color: #0A66C2;
+        }
+        .social-links .linkedin:hover .icon svg {
+            fill: white;
         }
 
         /* ===== COMPLIANCE ===== */
@@ -1261,16 +1390,19 @@
             border-radius: var(--radius);
             margin-bottom: 60px;
         }
+
         .compliance-box h4 {
             color: #9A3412;
             font-size: 1.2rem;
             margin-bottom: 12px;
         }
+
         .compliance-box p {
             color: #7C2D12;
             margin-bottom: 16px;
             font-size: 0.95rem;
         }
+
         .compliance-box ul {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1278,12 +1410,14 @@
             list-style: none;
             padding: 0;
         }
+
         .compliance-box ul li {
             font-size: 0.95rem;
             padding-left: 28px;
             position: relative;
             color: #5a1e0a;
         }
+
         .compliance-box ul li::before {
             content: "⚠️";
             position: absolute;
@@ -1370,6 +1504,18 @@
             }
             .floating-buttons .float-btn .badge {
                 display: none;
+            }
+            .social-links a {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+            .social-links a .icon {
+                width: 24px;
+                height: 24px;
+            }
+            .social-links a .icon svg {
+                width: 20px;
+                height: 20px;
             }
         }
 
@@ -1469,20 +1615,6 @@
             .section-header.pci::after {
                 display: none;
             }
-            .counter-section {
-                padding: 20px;
-                gap: 20px;
-                margin: 40px 0 20px;
-            }
-            .counter-item .info .number {
-                font-size: 1.8rem;
-            }
-            .counter-divider {
-                display: none;
-            }
-            .counter-item .icon {
-                font-size: 1.6rem;
-            }
             .btn-whatsapp {
                 padding: 16px 30px;
                 font-size: 1.1rem;
@@ -1503,6 +1635,34 @@
             }
             .btn-secondary .icon {
                 font-size: 1rem;
+            }
+            .social-section {
+                padding: 20px 16px;
+            }
+            .social-section h3 {
+                font-size: 1rem;
+            }
+            .social-links {
+                gap: 12px;
+            }
+            .social-links a {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                gap: 8px;
+            }
+            .social-links a .icon {
+                width: 22px;
+                height: 22px;
+            }
+            .social-links a .icon svg {
+                width: 18px;
+                height: 18px;
+            }
+            #splash-screen .splash-logo {
+                width: 150px;
+            }
+            #splash-screen .splash-text {
+                font-size: 1.2rem;
             }
         }
 
@@ -1602,22 +1762,28 @@
             .btn-secondary .icon {
                 font-size: 0.9rem;
             }
-            .counter-item .info .number {
-                font-size: 1.4rem;
+            .social-section {
+                padding: 16px 12px;
             }
-            .counter-item .info .label {
+            .social-section h3 {
+                font-size: 0.9rem;
+            }
+            .social-links {
+                gap: 8px;
+            }
+            .social-links a {
+                padding: 6px 12px;
                 font-size: 0.7rem;
+                gap: 6px;
+                border-width: 1px;
             }
-            .counter-item .icon {
-                font-size: 1.3rem;
-                gap: 10px;
+            .social-links a .icon {
+                width: 20px;
+                height: 20px;
             }
-            .counter-badge {
-                font-size: 0.6rem;
-                padding: 4px 14px;
-            }
-            .counter-item {
-                gap: 10px;
+            .social-links a .icon svg {
+                width: 16px;
+                height: 16px;
             }
             footer {
                 font-size: 0.75rem;
@@ -1629,12 +1795,29 @@
             footer .footer-emails .email-secondary {
                 font-size: 0.7rem;
             }
+            #splash-screen .splash-logo {
+                width: 120px;
+            }
+            #splash-screen .splash-text {
+                font-size: 1rem;
+            }
+            #splash-screen .splash-loader {
+                width: 35px;
+                height: 35px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== NAVEGACIÓN FIJA ===== -->
+    <!-- ===== SPLASH SCREEN ===== -->
+    <div id="splash-screen">
+        <img src="photo-removebg-preview.png" alt="INSSO" class="splash-logo">
+        <div class="splash-text">INSSO<span>.</span></div>
+        <div class="splash-loader"></div>
+    </div>
+
+    <!-- ===== NAVEGACIÓN ===== -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -1652,7 +1835,7 @@
         </div>
     </nav>
 
-    <!-- ===== HERO - PANTALLA COMPLETA CON LOGO ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero-fullscreen">
         <div class="hero-logo-wrapper">
             <img src="photo-removebg-preview.png" 
@@ -1931,32 +2114,34 @@
                 </ul>
             </div>
 
-            <!-- ===== CONTADOR ===== -->
-            <div class="counter-section">
-                <div class="counter-item">
-                    <span class="icon">👁️</span>
-                    <div class="info">
-                        <span class="number" id="visitCounter">0</span>
-                        <span class="label">Visitas a la página</span>
-                    </div>
+            <!-- ===== REDES SOCIALES ===== -->
+            <div class="social-section">
+                <h3>📱 Síguenos en <span>Redes Sociales</span></h3>
+                <div class="social-links">
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/tu-pagina" target="_blank" rel="noopener noreferrer" class="facebook">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </span>
+                        Facebook
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/tu-perfil" target="_blank" rel="noopener noreferrer" class="instagram">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </span>
+                        Instagram
+                    </a>
+
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@tu-usuario" target="_blank" rel="noopener noreferrer" class="tiktok">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.11-.59-1.62-.93-.01 2.92.01 5.84-.02 8.76-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </span>
+                        TikTok
+                    </a>
                 </div>
-                <div class="counter-divider"></div>
-                <div class="counter-item">
-                    <span class="icon">🏆</span>
-                    <div class="info">
-                        <span class="number"><span id="clientCounter">0</span>+</span>
-                        <span class="label">Clientes satisfechos</span>
-                    </div>
-                </div>
-                <div class="counter-divider"></div>
-                <div class="counter-item">
-                    <span class="icon">⭐</span>
-                    <div class="info">
-                        <span class="number"><span id="projectCounter">0</span>+</span>
-                        <span class="label">Proyectos realizados</span>
-                    </div>
-                </div>
-                <span class="counter-badge">🚀 En crecimiento</span>
             </div>
 
             <!-- ===== CONTACTO ===== -->
@@ -2003,7 +2188,6 @@
                     </a>
                 </div>
 
-                <!-- ===== NÚMERO ADICIONAL COMO TEXTO ===== -->
                 <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
                     <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 4px;">📞 También puedes contactarnos al:</p>
                     <p style="color: var(--white); font-size: 1.3rem; font-weight: 700; letter-spacing: 1px;">0992 311 266</p>
@@ -2028,7 +2212,6 @@
 
     <!-- ===== BOTONES FLOTANTES ===== -->
     <div class="floating-buttons">
-        <!-- WhatsApp -->
         <a href="https://wa.me/595992672919?text=Hola%20INSSO,%20quiero%20solicitar%20una%20asesoría%20técnica"
            class="float-btn whatsapp-btn"
            target="_blank"
@@ -2041,7 +2224,6 @@
             <span class="badge">📱</span>
         </a>
 
-        <!-- Correo -->
         <a href="mailto:insso_consultora@outlook.com?subject=Consulta%20sobre%20servicios%20INSSO&body=Hola,%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20INSSO.%20Me%20gustaría%20recibir%20información%20sobre:%0A%0A- Servicios de ingeniería%0A- Consultoría de seguridad%0A- Capacitaciones%0A- Protección contra incendios%0A%0AQuedo atento a su respuesta.%0A%0ASaludos."
            class="float-btn email-btn"
            target="_blank"
@@ -2070,34 +2252,12 @@
     </div>
 
     <script>
-        // ===== CONTADOR DE VISITAS =====
-        function updateCounter() {
-            let visits = localStorage.getItem('inssso_visits');
-            if (visits === null) visits = 0;
-            visits = parseInt(visits) + 1;
-            localStorage.setItem('inssso_visits', visits);
-            const counterElement = document.getElementById('visitCounter');
-            animateNumber(counterElement, 0, visits, 1500);
-        }
-
-        function animateNumber(element, start, end, duration) {
-            const startTime = performance.now();
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.round(start + (end - start) * eased);
-                element.textContent = current.toLocaleString();
-                if (progress < 1) requestAnimationFrame(update);
-                else element.textContent = end.toLocaleString();
-            }
-            requestAnimationFrame(update);
-        }
-
-        function initCounters() {
-            animateNumber(document.getElementById('clientCounter'), 0, 156, 2000);
-            animateNumber(document.getElementById('projectCounter'), 0, 89, 2000);
-        }
+        // ===== SPLASH SCREEN =====
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('splash-screen').classList.add('hidden');
+            }, 3000);
+        });
 
         // ===== DATOS DE SERVICIOS =====
         const serviceData = {
@@ -2224,11 +2384,6 @@
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeModal();
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCounter();
-            initCounters();
         });
     </script>
 
