@@ -54,8 +54,6 @@
             --white: #ffffff;
             --radius: 16px;
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            
-            /* Colores que cambiarán con el degradado */
             --bg-color1: #EEF4F8;
             --bg-color2: #E8F0FE;
             --bg-card: #ffffff;
@@ -84,7 +82,7 @@
             padding: 0 20px;
         }
 
-        /* ===== SPLASH SCREEN ===== */
+        /* ===== SPLASH SCREEN - LOGO GRANDE CENTRADO ===== */
         #splash-screen {
             position: fixed;
             top: 0;
@@ -105,44 +103,69 @@
             visibility: hidden;
         }
 
+        #splash-screen .splash-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: splashZoom 1.5s ease-out forwards;
+        }
+
         #splash-screen .splash-logo {
-            width: 200px;
-            max-width: 40vw;
+            width: 350px;
+            max-width: 60vw;
             height: auto;
-            animation: splashPulse 1.5s ease-in-out infinite;
             filter: brightness(0) invert(1);
+            animation: splashPulse 1.5s ease-in-out infinite;
+            margin-bottom: 20px;
         }
 
         #splash-screen .splash-text {
-            margin-top: 20px;
             color: white;
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 700;
-            letter-spacing: 4px;
-            opacity: 0.8;
+            letter-spacing: 6px;
+            opacity: 0.9;
+            animation: splashTextFade 1.2s ease-out;
         }
 
         #splash-screen .splash-text span {
             color: #F35B04;
         }
 
-        #splash-screen .splash-loader {
-            margin-top: 20px;
-            width: 45px;
-            height: 45px;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-top-color: #F35B04;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        @keyframes splashZoom {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         @keyframes splashPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.04); }
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes splashTextFade {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
         }
 
         /* ===== NAVEGACIÓN ===== */
@@ -1257,7 +1280,7 @@
             font-size: 1.2rem;
         }
 
-        /* ===== REDES SOCIALES (más grandes y llamativas) ===== */
+        /* ===== REDES SOCIALES ===== */
         .social-section {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
@@ -1404,20 +1427,6 @@
             border-color: #010101;
         }
         .social-links .tiktok:hover .icon svg {
-            fill: white;
-        }
-
-        .social-links .youtube {
-            color: #FF0000;
-            border-color: rgba(255, 0, 0, 0.2);
-            background: rgba(255, 0, 0, 0.05);
-        }
-        .social-links .youtube:hover {
-            background: #FF0000;
-            color: white;
-            border-color: #FF0000;
-        }
-        .social-links .youtube:hover .icon svg {
             fill: white;
         }
 
@@ -1593,6 +1602,12 @@
             .social-links a .social-text .name {
                 font-size: 0.95rem;
             }
+            #splash-screen .splash-logo {
+                width: 280px;
+            }
+            #splash-screen .splash-text {
+                font-size: 1.6rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1744,10 +1759,10 @@
                 display: none !important;
             }
             #splash-screen .splash-logo {
-                width: 150px;
+                width: 200px;
             }
             #splash-screen .splash-text {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
 
@@ -1884,14 +1899,11 @@
                 font-size: 0.7rem;
             }
             #splash-screen .splash-logo {
-                width: 120px;
+                width: 160px;
             }
             #splash-screen .splash-text {
                 font-size: 1rem;
-            }
-            #splash-screen .splash-loader {
-                width: 35px;
-                height: 35px;
+                letter-spacing: 3px;
             }
             .color-indicator {
                 display: none !important;
@@ -1901,11 +1913,12 @@
 </head>
 <body>
 
-    <!-- ===== SPLASH SCREEN ===== -->
+    <!-- ===== SPLASH SCREEN - LOGO GRANDE CENTRADO ===== -->
     <div id="splash-screen">
-        <img src="photo-removebg-preview.png" alt="INSSO" class="splash-logo">
-        <div class="splash-text">INSSO<span>.</span></div>
-        <div class="splash-loader"></div>
+        <div class="splash-wrapper">
+            <img src="photo-removebg-preview.png" alt="INSSO" class="splash-logo">
+            <div class="splash-text">INSSO<span>.</span></div>
+        </div>
     </div>
 
     <!-- ===== INDICADOR DE COLOR ===== -->
@@ -1951,12 +1964,12 @@
     <div class="content-section" id="contentSection">
         <div class="container">
 
-            <!-- ===== REDES SOCIALES - UBICADAS AL INICIO ===== -->
+            <!-- ===== REDES SOCIALES ===== -->
             <div class="social-section">
                 <h3>📱 Síguenos en <span>Redes Sociales</span></h3>
                 <div class="social-links">
                     <!-- FACEBOOK -->
-                    <a href="https://www.facebook.com/tu-pagina" target="_blank" rel="noopener noreferrer" class="facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61591519017230" target="_blank" rel="noopener noreferrer" class="facebook">
                         <span class="icon">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </span>
@@ -1967,24 +1980,24 @@
                     </a>
 
                     <!-- INSTAGRAM -->
-                    <a href="https://www.instagram.com/tu-perfil" target="_blank" rel="noopener noreferrer" class="instagram">
+                    <a href="https://www.instagram.com/insso_consultora/" target="_blank" rel="noopener noreferrer" class="instagram">
                         <span class="icon">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </span>
                         <span class="social-text">
                             <span class="name">Instagram</span>
-                            <span class="username">@INSSO</span>
+                            <span class="username">@insso_consultora</span>
                         </span>
                     </a>
 
                     <!-- TIKTOK -->
-                    <a href="https://www.tiktok.com/@tu-usuario" target="_blank" rel="noopener noreferrer" class="tiktok">
+                    <a href="https://www.tiktok.com/@inssoconsultora" target="_blank" rel="noopener noreferrer" class="tiktok">
                         <span class="icon">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.11-.59-1.62-.93-.01 2.92.01 5.84-.02 8.76-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                         </span>
                         <span class="social-text">
                             <span class="name">TikTok</span>
-                            <span class="username">@INSSO</span>
+                            <span class="username">@inssoconsultora</span>
                         </span>
                     </a>
                 </div>
@@ -2358,16 +2371,15 @@
     </div>
 
     <script>
-        // ===== SPLASH SCREEN =====
+        // ===== SPLASH SCREEN - DESAPARECE EN 2 SEGUNDOS =====
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('splash-screen').classList.add('hidden');
-            }, 3000);
+            }, 2000);
         });
 
         // ===== CAMBIO DE COLOR AUTOMÁTICO CADA 5 SEGUNDOS =====
         const colorPalettes = [
-            // [color1, color2, nombre]
             ['#EEF4F8', '#E8F0FE', 'Claro Azul'],
             ['#F0F4FF', '#E6EEFA', 'Azul Claro'],
             ['#F5F0FF', '#EDE6FA', 'Lavanda'],
@@ -2383,8 +2395,6 @@
         let colorIndex = 0;
         let isTransitioning = false;
         const body = document.body;
-        const heroSection = document.getElementById('heroSection');
-        const contentSection = document.getElementById('contentSection');
         const colorDot = document.getElementById('colorDot');
         const colorName = document.getElementById('colorName');
 
@@ -2396,22 +2406,16 @@
             const currentColors = colorPalettes[colorIndex];
             const nextColors = colorPalettes[nextIndex];
 
-            // Cambiar colores con transición suave
             body.style.transition = 'background 1.2s ease';
-            
-            // Aplicar nuevo color
             body.style.background = `linear-gradient(135deg, ${nextColors[0]}, ${nextColors[1]})`;
             
-            // Actualizar variables CSS para los elementos que dependen del fondo
             document.documentElement.style.setProperty('--bg-color1', nextColors[0]);
             document.documentElement.style.setProperty('--bg-color2', nextColors[1]);
             
-            // Ajustar color de tarjetas según el fondo
             const isDark = nextIndex % 2 === 0;
             document.documentElement.style.setProperty('--bg-card', isDark ? '#ffffff' : '#ffffff');
             document.documentElement.style.setProperty('--bg-card-hover', isDark ? '#f8fafc' : '#f5f5f5');
 
-            // Actualizar indicador
             colorDot.style.background = `linear-gradient(135deg, ${nextColors[0]}, ${nextColors[1]})`;
             colorName.textContent = nextColors[2];
 
@@ -2422,7 +2426,6 @@
             }, 1200);
         }
 
-        // Iniciar colores
         function initColors() {
             const initial = colorPalettes[0];
             body.style.background = `linear-gradient(135deg, ${initial[0]}, ${initial[1]})`;
@@ -2430,22 +2433,16 @@
             document.documentElement.style.setProperty('--bg-color2', initial[1]);
             colorDot.style.background = `linear-gradient(135deg, ${initial[0]}, ${initial[1]})`;
             colorName.textContent = initial[2];
-            
-            // Mostrar indicador de color
             document.getElementById('colorIndicator').style.display = 'block';
         }
 
-        // Cambiar cada 5 segundos
         let colorInterval = setInterval(changeColor, 5000);
 
-        // Pausar el cambio cuando el usuario interactúa con la página
         document.addEventListener('click', function() {
-            // Reiniciar el temporizador al hacer clic
             clearInterval(colorInterval);
             colorInterval = setInterval(changeColor, 5000);
         });
 
-        // Inicializar
         initColors();
 
         // ===== DATOS DE SERVICIOS =====
