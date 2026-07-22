@@ -116,7 +116,7 @@
         z-index: 1;
     }
 
-    /* ===== SPLASH SCREEN MEJORADO: LOGO 3D + ENGRANAJE ===== */
+    /* ===== SPLASH SCREEN MEJORADO: LOGO 3D + ENGRANAJES ===== */
     #splash-screen {
         position: fixed;
         top: 0;
@@ -949,6 +949,7 @@
         font-size: 0.9rem;
         box-shadow: 0 4px 15px rgba(214,40,40,0.3);
         cursor: pointer;
+        margin-top: 20px;
     }
     .btn-download-pdf:hover {
         background: var(--red-dark);
@@ -959,17 +960,29 @@
         font-size: 1.2rem;
     }
 
-    /* ===== CONTENEDOR PARA PDF (oculto visualmente pero presente) ===== */
+    /* ===== CONTENEDOR PARA PDF (oculto por defecto, se muestra al generar) ===== */
     #pdf-content {
-        position: absolute;
-        left: -9999px;
-        top: 0;
-        width: 100%;
+        display: none;
         background: #fff;
         padding: 30px;
         font-family: 'Montserrat', sans-serif;
         color: #1e293b;
-        z-index: -1;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    #pdf-content.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 9999;
+        background: #fff;
+        padding: 30px;
+        overflow-y: auto;
+        max-height: 100vh;
     }
     #pdf-content .pdf-header {
         text-align: center;
@@ -996,7 +1009,6 @@
         padding: 15px 20px;
         margin-bottom: 15px;
         background: #f8fafc;
-        transition: background 0.3s;
     }
     #pdf-content .pdf-service h3 {
         font-family: 'Barlow Condensed', sans-serif;
@@ -1819,7 +1831,7 @@
             </a>
         </div>
     </div>
-</div>
+</section>
 
 <!-- ===== SOBRE NOSOTROS ===== -->
 <section id="nosotros">
@@ -2068,7 +2080,7 @@
     </div>
 </section>
 
-<!-- ===== CONTENEDOR PARA PDF (oculto, pero con todo el contenido de servicios) ===== -->
+<!-- ===== CONTENEDOR PARA PDF (oculto, se muestra al generar) ===== -->
 <div id="pdf-content">
     <div class="pdf-header">
         <h1>IN<span>SSO</span></h1>
@@ -2332,27 +2344,35 @@
         observerStats.observe(stat1.closest('.about-stats'));
     }
 
-    // ===== GENERAR PDF =====
+    // ===== GENERAR PDF (CORREGIDO) =====
     document.getElementById('downloadPdfBtn').addEventListener('click', function() {
         const element = document.getElementById('pdf-content');
-        const opt = {
-            margin:        [0.5, 0.5, 0.5, 0.5], // márgenes en pulgadas
-            filename:     'Servicios_INSSO.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, letterRendering: true, useCORS: true },
-            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-        };
-        // Mostrar mensaje de carga
         const btn = this;
         const originalText = btn.innerHTML;
+
+        // Mostrar el contenido temporalmente
+        element.classList.add('active');
+        // Forzar un reflow para asegurar que el contenido se renderice
+        void element.offsetHeight;
+
+        const opt = {
+            margin:        [0.5, 0.5, 0.5, 0.5],
+            filename:     'Servicios_INSSO.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, letterRendering: true, useCORS: true, logging: false },
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generando PDF...';
         btn.disabled = true;
 
         html2pdf().set(opt).from(element).save().then(function() {
+            element.classList.remove('active');
             btn.innerHTML = originalText;
             btn.disabled = false;
         }).catch(function(err) {
             console.error('Error al generar PDF:', err);
+            element.classList.remove('active');
             btn.innerHTML = originalText;
             btn.disabled = false;
             alert('Ocurrió un error al generar el PDF. Inténtalo de nuevo.');
