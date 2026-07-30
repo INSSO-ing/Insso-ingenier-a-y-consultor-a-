@@ -37,7 +37,6 @@
                     "purpose": "maskable"
                 }]
             };
-
             const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement('link');
@@ -85,12 +84,7 @@
             position: relative;
             background: #fff;
         }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 700;
             letter-spacing: 0.5px;
@@ -100,7 +94,6 @@
         a {
             text-decoration: none;
         }
-
         body::before {
             content: '';
             position: fixed;
@@ -116,11 +109,7 @@
             z-index: 0;
             pointer-events: none;
         }
-        .container,
-        section,
-        .hero,
-        .navbar,
-        footer {
+        .container, section, .hero, .navbar, footer {
             position: relative;
             z-index: 1;
         }
@@ -145,7 +134,6 @@
             opacity: 0;
             visibility: hidden;
         }
-
         .splash-particles {
             position: absolute;
             inset: 0;
@@ -160,94 +148,21 @@
             border-radius: 50%;
             animation: floatParticle linear infinite;
         }
-        .splash-particles span:nth-child(1) {
-            left: 10%;
-            top: 20%;
-            animation-duration: 18s;
-            animation-delay: 0s;
-            width: 8px;
-            height: 8px;
-        }
-        .splash-particles span:nth-child(2) {
-            left: 85%;
-            top: 15%;
-            animation-duration: 22s;
-            animation-delay: 2s;
-            width: 5px;
-            height: 5px;
-        }
-        .splash-particles span:nth-child(3) {
-            left: 20%;
-            top: 80%;
-            animation-duration: 20s;
-            animation-delay: 1s;
-            width: 7px;
-            height: 7px;
-        }
-        .splash-particles span:nth-child(4) {
-            left: 70%;
-            top: 75%;
-            animation-duration: 25s;
-            animation-delay: 3s;
-            width: 4px;
-            height: 4px;
-        }
-        .splash-particles span:nth-child(5) {
-            left: 50%;
-            top: 10%;
-            animation-duration: 16s;
-            animation-delay: 0.5s;
-            width: 6px;
-            height: 6px;
-        }
-        .splash-particles span:nth-child(6) {
-            left: 5%;
-            top: 50%;
-            animation-duration: 24s;
-            animation-delay: 4s;
-            width: 5px;
-            height: 5px;
-        }
-        .splash-particles span:nth-child(7) {
-            left: 92%;
-            top: 55%;
-            animation-duration: 19s;
-            animation-delay: 1.5s;
-            width: 8px;
-            height: 8px;
-        }
-        .splash-particles span:nth-child(8) {
-            left: 40%;
-            top: 92%;
-            animation-duration: 21s;
-            animation-delay: 2.5s;
-            width: 6px;
-            height: 6px;
-        }
-
+        .splash-particles span:nth-child(1) { left: 10%; top: 20%; animation-duration: 18s; width: 8px; height: 8px; }
+        .splash-particles span:nth-child(2) { left: 85%; top: 15%; animation-duration: 22s; animation-delay: 2s; width: 5px; height: 5px; }
+        .splash-particles span:nth-child(3) { left: 20%; top: 80%; animation-duration: 20s; animation-delay: 1s; width: 7px; height: 7px; }
+        .splash-particles span:nth-child(4) { left: 70%; top: 75%; animation-duration: 25s; animation-delay: 3s; width: 4px; height: 4px; }
+        .splash-particles span:nth-child(5) { left: 50%; top: 10%; animation-duration: 16s; animation-delay: 0.5s; width: 6px; height: 6px; }
+        .splash-particles span:nth-child(6) { left: 5%; top: 50%; animation-duration: 24s; animation-delay: 4s; width: 5px; height: 5px; }
+        .splash-particles span:nth-child(7) { left: 92%; top: 55%; animation-duration: 19s; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .splash-particles span:nth-child(8) { left: 40%; top: 92%; animation-duration: 21s; animation-delay: 2.5s; width: 6px; height: 6px; }
         @keyframes floatParticle {
-            0% {
-                transform: translateY(0) translateX(0) scale(1);
-                opacity: 0.2;
-            }
-            25% {
-                transform: translateY(-40px) translateX(20px) scale(1.3);
-                opacity: 0.6;
-            }
-            50% {
-                transform: translateY(-80px) translateX(-10px) scale(0.8);
-                opacity: 0.3;
-            }
-            75% {
-                transform: translateY(-120px) translateX(30px) scale(1.5);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-180px) translateX(0) scale(1);
-                opacity: 0.1;
-            }
+            0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.2; }
+            25% { transform: translateY(-40px) translateX(20px) scale(1.3); opacity: 0.6; }
+            50% { transform: translateY(-80px) translateX(-10px) scale(0.8); opacity: 0.3; }
+            75% { transform: translateY(-120px) translateX(30px) scale(1.5); opacity: 0.7; }
+            100% { transform: translateY(-180px) translateX(0) scale(1); opacity: 0.1; }
         }
-
         .splash-ring {
             position: absolute;
             border-radius: 50%;
@@ -255,38 +170,13 @@
             animation: ringPulse 4s ease-in-out infinite;
             pointer-events: none;
         }
-        .splash-ring:nth-child(1) {
-            width: 320px;
-            height: 320px;
-            animation-delay: 0s;
-            border-width: 1px;
-        }
-        .splash-ring:nth-child(2) {
-            width: 400px;
-            height: 400px;
-            animation-delay: 1.5s;
-            border-width: 1.5px;
-            border-color: rgba(249, 115, 22, 0.08);
-        }
-        .splash-ring:nth-child(3) {
-            width: 480px;
-            height: 480px;
-            animation-delay: 3s;
-            border-width: 1px;
-            border-color: rgba(249, 115, 22, 0.05);
-        }
+        .splash-ring:nth-child(1) { width: 320px; height: 320px; border-width: 1px; }
+        .splash-ring:nth-child(2) { width: 400px; height: 400px; animation-delay: 1.5s; border-width: 1.5px; border-color: rgba(249,115,22,0.08); }
+        .splash-ring:nth-child(3) { width: 480px; height: 480px; animation-delay: 3s; border-width: 1px; border-color: rgba(249,115,22,0.05); }
         @keyframes ringPulse {
-            0%,
-            100% {
-                transform: scale(1) rotate(0deg);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.08) rotate(180deg);
-                opacity: 1;
-            }
+            0%,100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+            50% { transform: scale(1.08) rotate(180deg); opacity: 1; }
         }
-
         .splash-wrapper {
             display: flex;
             flex-direction: column;
@@ -297,20 +187,10 @@
             animation: splashZoom 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
         @keyframes splashZoom {
-            0% {
-                transform: scale(0.6) rotate(-8deg);
-                opacity: 0;
-            }
-            60% {
-                transform: scale(1.05) rotate(1deg);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1) rotate(0deg);
-                opacity: 1;
-            }
+            0% { transform: scale(0.6) rotate(-8deg); opacity: 0; }
+            60% { transform: scale(1.05) rotate(1deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
         }
-
         .splash-logo-container {
             position: relative;
             width: 200px;
@@ -319,7 +199,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .splash-logo-glow {
             position: absolute;
             width: 200px;
@@ -330,17 +209,9 @@
             filter: blur(20px);
         }
         @keyframes glowPulse {
-            0%,
-            100% {
-                transform: scale(0.9);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.3);
-                opacity: 1;
-            }
+            0%,100% { transform: scale(0.9); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 1; }
         }
-
         .splash-logo {
             width: 160px;
             height: auto;
@@ -350,15 +221,9 @@
             animation: logoFloat 3.5s ease-in-out infinite;
         }
         @keyframes logoFloat {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
-
         .splash-gear {
             position: absolute;
             color: var(--orange);
@@ -368,45 +233,14 @@
             filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.3));
             font-size: 3rem;
         }
-        .splash-gear:nth-child(1) {
-            top: -10px;
-            right: -30px;
-            font-size: 3.2rem;
-            animation-duration: 12s;
-        }
-        .splash-gear:nth-child(2) {
-            bottom: -10px;
-            left: -30px;
-            font-size: 2.8rem;
-            animation-duration: 8s;
-            animation-direction: reverse;
-        }
-        .splash-gear:nth-child(3) {
-            top: 50%;
-            left: -48px;
-            transform: translateY(-50%);
-            font-size: 2.2rem;
-            animation-duration: 14s;
-            opacity: 0.4;
-        }
-        .splash-gear:nth-child(4) {
-            top: 50%;
-            right: -48px;
-            transform: translateY(-50%);
-            font-size: 2.2rem;
-            animation-duration: 11s;
-            animation-direction: reverse;
-            opacity: 0.4;
-        }
+        .splash-gear:nth-child(1) { top: -10px; right: -30px; font-size: 3.2rem; animation-duration: 12s; }
+        .splash-gear:nth-child(2) { bottom: -10px; left: -30px; font-size: 2.8rem; animation-duration: 8s; animation-direction: reverse; }
+        .splash-gear:nth-child(3) { top: 50%; left: -48px; transform: translateY(-50%); font-size: 2.2rem; animation-duration: 14s; opacity: 0.4; }
+        .splash-gear:nth-child(4) { top: 50%; right: -48px; transform: translateY(-50%); font-size: 2.2rem; animation-duration: 11s; animation-direction: reverse; opacity: 0.4; }
         @keyframes spinGear {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-
         .splash-text {
             color: #fff;
             font-size: 2.6rem;
@@ -415,15 +249,10 @@
             font-family: 'Barlow Condensed', sans-serif;
             margin-top: 16px;
             text-transform: uppercase;
-            position: relative;
         }
-        .splash-text span {
-            color: var(--orange);
-            text-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
-        }
-
+        .splash-text span { color: var(--orange); text-shadow: 0 0 30px rgba(249,115,22,0.4); }
         .splash-sub {
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255,255,255,0.55);
             font-size: 0.9rem;
             font-weight: 400;
             letter-spacing: 4px;
@@ -431,12 +260,11 @@
             margin-top: 4px;
             font-family: 'Montserrat', sans-serif;
         }
-
         .splash-loader {
             margin-top: 40px;
             width: 200px;
             height: 3px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255,255,255,0.08);
             border-radius: 4px;
             overflow: hidden;
             position: relative;
@@ -453,75 +281,31 @@
             border-radius: 4px;
         }
         @keyframes loadBar {
-            0% {
-                left: -100%;
-            }
-            100% {
-                left: 200%;
-            }
+            0% { left: -100%; }
+            100% { left: 200%; }
         }
-
         .splash-loader-text {
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255,255,255,0.25);
             font-size: 0.65rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-top: 10px;
             font-weight: 300;
         }
-
         @media (max-width: 768px) {
-            .splash-logo-container {
-                width: 150px;
-                height: 150px;
-            }
-            .splash-logo {
-                width: 120px;
-            }
-            .splash-logo-glow {
-                width: 150px;
-                height: 150px;
-            }
-            .splash-text {
-                font-size: 2rem;
-                letter-spacing: 5px;
-            }
-            .splash-gear {
-                font-size: 2.2rem !important;
-            }
-            .splash-gear:nth-child(1) {
-                font-size: 2.4rem !important;
-                top: -6px;
-                right: -20px;
-            }
-            .splash-gear:nth-child(2) {
-                font-size: 2rem !important;
-                bottom: -6px;
-                left: -20px;
-            }
-            .splash-gear:nth-child(3),
-            .splash-gear:nth-child(4) {
-                display: none;
-            }
-            .splash-ring:nth-child(1) {
-                width: 220px;
-                height: 220px;
-            }
-            .splash-ring:nth-child(2) {
-                width: 280px;
-                height: 280px;
-            }
-            .splash-ring:nth-child(3) {
-                width: 340px;
-                height: 340px;
-            }
-            .splash-sub {
-                font-size: 0.7rem;
-                letter-spacing: 2px;
-            }
-            .splash-loader {
-                width: 150px;
-            }
+            .splash-logo-container { width: 150px; height: 150px; }
+            .splash-logo { width: 120px; }
+            .splash-logo-glow { width: 150px; height: 150px; }
+            .splash-text { font-size: 2rem; letter-spacing: 5px; }
+            .splash-gear { font-size: 2.2rem !important; }
+            .splash-gear:nth-child(1) { font-size: 2.4rem !important; top: -6px; right: -20px; }
+            .splash-gear:nth-child(2) { font-size: 2rem !important; bottom: -6px; left: -20px; }
+            .splash-gear:nth-child(3), .splash-gear:nth-child(4) { display: none; }
+            .splash-ring:nth-child(1) { width: 220px; height: 220px; }
+            .splash-ring:nth-child(2) { width: 280px; height: 280px; }
+            .splash-ring:nth-child(3) { width: 340px; height: 340px; }
+            .splash-sub { font-size: 0.7rem; letter-spacing: 2px; }
+            .splash-loader { width: 150px; }
         }
 
         /* INSTALL BANNER */
@@ -535,35 +319,18 @@
             color: white;
             padding: 16px 20px;
             z-index: 9999;
-            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 -4px 30px rgba(0,0,0,0.4);
             align-items: center;
             justify-content: space-between;
             gap: 12px;
             flex-wrap: wrap;
             border-top: 3px solid var(--orange);
         }
-        #installBanner.show {
-            display: flex;
-        }
-        #installBanner .install-text {
-            flex: 1;
-            font-size: 14px;
-            min-width: 200px;
-        }
-        #installBanner .install-text strong {
-            font-size: 16px;
-            display: block;
-            color: var(--orange);
-        }
-        #installBanner .install-text span {
-            opacity: 0.8;
-            font-size: 12px;
-        }
-        #installBanner .install-buttons {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
+        #installBanner.show { display: flex; }
+        #installBanner .install-text { flex: 1; font-size: 14px; min-width: 200px; }
+        #installBanner .install-text strong { font-size: 16px; display: block; color: var(--orange); }
+        #installBanner .install-text span { opacity: 0.8; font-size: 12px; }
+        #installBanner .install-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
         #installBanner .btn-install {
             background: var(--orange);
             color: #fff;
@@ -575,24 +342,18 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        #installBanner .btn-install:hover {
-            background: var(--orange-dark);
-            transform: scale(1.05);
-        }
+        #installBanner .btn-install:hover { background: var(--orange-dark); transform: scale(1.05); }
         #installBanner .btn-close-install {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.1);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255,255,255,0.2);
             padding: 10px 18px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
             transition: all 0.3s;
         }
-        #installBanner .btn-close-install:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
+        #installBanner .btn-close-install:hover { background: rgba(255,255,255,0.2); }
         #installFloatBtn {
             display: none;
             position: fixed;
@@ -605,7 +366,7 @@
             padding: 14px 22px;
             font-weight: 700;
             font-size: 13px;
-            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+            box-shadow: 0 4px 20px rgba(249,115,22,0.4);
             cursor: pointer;
             z-index: 998;
             align-items: center;
@@ -613,32 +374,15 @@
             transition: all 0.3s;
             animation: pulseInstall 2s infinite;
         }
-        #installFloatBtn.show {
-            display: flex;
-        }
-        #installFloatBtn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.6);
-        }
-        #installFloatBtn .icon {
-            font-size: 20px;
-        }
+        #installFloatBtn.show { display: flex; }
+        #installFloatBtn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(249,115,22,0.6); }
+        #installFloatBtn .icon { font-size: 20px; }
         @keyframes pulseInstall {
-            0%,
-            100% {
-                transform: scale(1);
-                box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 4px 40px rgba(249, 115, 22, 0.7);
-            }
+            0%,100% { transform: scale(1); box-shadow: 0 4px 20px rgba(249,115,22,0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 4px 40px rgba(249,115,22,0.7); }
         }
         @media (display-mode: standalone) {
-            #installFloatBtn,
-            #installBanner {
-                display: none !important;
-            }
+            #installFloatBtn, #installBanner { display: none !important; }
         }
 
         /* TOPBAR */
@@ -648,34 +392,22 @@
             font-size: 0.82rem;
             padding: 8px 0;
         }
-        .topbar a {
-            color: #cbd5e1;
-        }
-        .topbar a:hover {
-            color: var(--orange);
-        }
-        .topbar .sep {
-            opacity: 0.4;
-            margin: 0 10px;
-        }
-        .topbar .social-icons-top a {
-            margin-left: 10px;
-            font-size: 0.9rem;
-        }
-        .topbar .social-icons-top a:hover {
-            color: var(--orange);
-        }
+        .topbar a { color: #cbd5e1; }
+        .topbar a:hover { color: var(--orange); }
+        .topbar .sep { opacity: 0.4; margin: 0 10px; }
+        .topbar .social-icons-top a { margin-left: 10px; font-size: 0.9rem; }
+        .topbar .social-icons-top a:hover { color: var(--orange); }
 
         /* NAVBAR */
         .navbar {
-            background: rgba(10, 31, 61, 0.95);
+            background: rgba(10,31,61,0.95);
             backdrop-filter: blur(8px);
             padding: 0.6rem 0;
             transition: all 0.3s ease;
         }
         .navbar.scrolled {
-            background: rgba(10, 31, 61, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(10,31,61,0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             padding: 0.4rem 0;
         }
         .navbar-brand {
@@ -693,11 +425,9 @@
             margin-right: 10px;
             filter: brightness(0) invert(1);
         }
-        .navbar-brand span {
-            color: var(--orange);
-        }
+        .navbar-brand span { color: var(--orange); }
         .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
+            color: rgba(255,255,255,0.9) !important;
             font-weight: 600;
             font-size: 0.92rem;
             text-transform: uppercase;
@@ -714,9 +444,7 @@
             background: var(--orange);
             transition: width 0.3s;
         }
-        .nav-link:hover::after {
-            width: 100%;
-        }
+        .nav-link:hover::after { width: 100%; }
         .btn-cotizar {
             background: var(--orange);
             color: #fff !important;
@@ -738,17 +466,12 @@
             left: -100%;
             width: 200%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s ease;
             z-index: -1;
         }
-        .btn-cotizar:hover::before {
-            left: 100%;
-        }
-        .btn-cotizar:hover {
-            background: var(--orange-dark);
-            transform: translateY(-2px);
-        }
+        .btn-cotizar:hover::before { left: 100%; }
+        .btn-cotizar:hover { background: var(--orange-dark); transform: translateY(-2px); }
 
         /* HERO */
         .hero {
@@ -764,7 +487,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(10, 31, 61, 0.92) 20%, rgba(10, 31, 61, 0.4) 100%);
+            background: linear-gradient(90deg, rgba(10,31,61,0.92) 20%, rgba(10,31,61,0.4) 100%);
             z-index: 1;
         }
         .hero .hero-bg {
@@ -775,9 +498,7 @@
             transform: scale(1.05);
             transition: transform 8s ease;
         }
-        .hero:hover .hero-bg {
-            transform: scale(1.08);
-        }
+        .hero:hover .hero-bg { transform: scale(1.08); }
         .hero-content {
             position: relative;
             z-index: 2;
@@ -797,13 +518,8 @@
             animation: pulseBorder 2s infinite;
         }
         @keyframes pulseBorder {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 0 8px rgba(249, 115, 22, 0);
-            }
+            0%,100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(249,115,22,0); }
         }
         .hero-content h1 {
             font-size: 3.6rem;
@@ -817,12 +533,8 @@
             animation: textGlow 2s ease-in-out infinite alternate;
         }
         @keyframes textGlow {
-            0% {
-                text-shadow: 0 0 5px rgba(249, 115, 22, 0.3);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(249, 115, 22, 0.8), 0 0 40px rgba(249, 115, 22, 0.3);
-            }
+            0% { text-shadow: 0 0 5px rgba(249,115,22,0.3); }
+            100% { text-shadow: 0 0 20px rgba(249,115,22,0.8), 0 0 40px rgba(249,115,22,0.3); }
         }
         .hero-content .typewriter {
             display: inline-block;
@@ -835,30 +547,19 @@
             font-weight: 800;
         }
         @keyframes typewriter {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
+            from { width: 0; }
+            to { width: 100%; }
         }
         @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
+            50% { border-color: transparent; }
         }
         .hero-content .sub-text {
             display: inline-block;
             animation: bounceText 3s ease-in-out infinite;
         }
         @keyframes bounceText {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-6px);
-            }
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
         }
         .hero-content p {
             font-size: 1.15rem;
@@ -868,14 +569,8 @@
             animation: fadeInUp 1.2s ease 1.5s both;
         }
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .btn-hero-primary {
             background: var(--orange);
@@ -900,18 +595,12 @@
             left: -100%;
             width: 200%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             transition: left 0.6s ease;
             z-index: -1;
         }
-        .btn-hero-primary:hover::before {
-            left: 100%;
-        }
-        .btn-hero-primary:hover {
-            background: var(--orange-dark);
-            color: #fff;
-            transform: translateY(-2px);
-        }
+        .btn-hero-primary:hover::before { left: 100%; }
+        .btn-hero-primary:hover { background: var(--orange-dark); color: #fff; transform: translateY(-2px); }
         .btn-hero-outline {
             border: 2px solid #fff;
             color: #fff;
@@ -925,11 +614,7 @@
             display: inline-block;
             animation: fadeInUp 1.2s ease 2.0s both;
         }
-        .btn-hero-outline:hover {
-            background: #fff;
-            color: var(--navy);
-            transform: translateY(-2px);
-        }
+        .btn-hero-outline:hover { background: #fff; color: var(--navy); transform: translateY(-2px); }
 
         .eyebrow-label {
             color: var(--orange);
@@ -945,27 +630,21 @@
             font-size: 2.4rem;
             margin-bottom: 1.5rem;
         }
-        section {
-            padding: 5rem 0;
-        }
-        .bg-gray {
-            background: var(--gray-light);
-        }
+        section { padding: 5rem 0; }
+        .bg-gray { background: var(--gray-light); }
 
         .social-section {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(10px);
             padding: 40px 20px;
             border-radius: 12px;
             text-align: center;
             margin: 20px 0 30px;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
             transition: box-shadow 0.4s ease;
         }
-        .social-section:hover {
-            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
-        }
+        .social-section:hover { box-shadow: 0 12px 50px rgba(0,0,0,0.1); }
         .social-section h3 {
             color: var(--navy);
             font-size: 1.6rem;
@@ -974,9 +653,7 @@
             font-family: 'Barlow Condensed', sans-serif;
             text-transform: uppercase;
         }
-        .social-section h3 span {
-            color: var(--orange);
-        }
+        .social-section h3 span { color: var(--orange); }
         .social-links {
             display: flex;
             justify-content: center;
@@ -995,7 +672,7 @@
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             border: 2px solid transparent;
             background: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
             position: relative;
             overflow: hidden;
         }
@@ -1006,15 +683,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.6s ease;
         }
-        .social-links a:hover::before {
-            left: 100%;
-        }
+        .social-links a:hover::before { left: 100%; }
         .social-links a:hover {
             transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
         }
         .social-links a .icon {
             width: 32px;
@@ -1025,120 +700,58 @@
             flex-shrink: 0;
             transition: transform 0.3s ease;
         }
-        .social-links a:hover .icon {
-            transform: rotate(-10deg) scale(1.1);
-        }
-        .social-links a .icon svg {
-            width: 28px;
-            height: 28px;
-            fill: currentColor;
-        }
+        .social-links a:hover .icon { transform: rotate(-10deg) scale(1.1); }
+        .social-links a .icon svg { width: 28px; height: 28px; fill: currentColor; }
         .social-links a .social-text {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             line-height: 1.2;
         }
-        .social-links a .social-text .name {
-            font-weight: 800;
-            font-size: 1.05rem;
-        }
-        .social-links a .social-text .username {
-            font-weight: 400;
-            font-size: 0.7rem;
-            opacity: 0.6;
-        }
+        .social-links a .social-text .name { font-weight: 800; font-size: 1.05rem; }
+        .social-links a .social-text .username { font-weight: 400; font-size: 0.7rem; opacity: 0.6; }
         .social-links .facebook {
             color: #1877F2;
-            border-color: rgba(24, 119, 242, 0.2);
-            background: rgba(24, 119, 242, 0.05);
+            border-color: rgba(24,119,242,0.2);
+            background: rgba(24,119,242,0.05);
         }
-        .social-links .facebook:hover {
-            background: #1877F2;
-            color: white;
-            border-color: #1877F2;
-        }
-        .social-links .facebook:hover .icon svg {
-            fill: white;
-        }
+        .social-links .facebook:hover { background: #1877F2; color: white; border-color: #1877F2; }
+        .social-links .facebook:hover .icon svg { fill: white; }
         .social-links .instagram {
             color: #E4405F;
-            border-color: rgba(228, 64, 95, 0.2);
-            background: rgba(228, 64, 95, 0.05);
+            border-color: rgba(228,64,95,0.2);
+            background: rgba(228,64,95,0.05);
         }
-        .social-links .instagram:hover {
-            background: #E4405F;
-            color: white;
-            border-color: #E4405F;
-        }
-        .social-links .instagram:hover .icon svg {
-            fill: white;
-        }
+        .social-links .instagram:hover { background: #E4405F; color: white; border-color: #E4405F; }
+        .social-links .instagram:hover .icon svg { fill: white; }
         .social-links .tiktok {
             color: #010101;
-            border-color: rgba(0, 0, 0, 0.1);
-            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0,0,0,0.1);
+            background: rgba(0,0,0,0.03);
         }
-        .social-links .tiktok:hover {
-            background: #010101;
-            color: white;
-            border-color: #010101;
-        }
-        .social-links .tiktok:hover .icon svg {
-            fill: white;
-        }
+        .social-links .tiktok:hover { background: #010101; color: white; border-color: #010101; }
+        .social-links .tiktok:hover .icon svg { fill: white; }
         @media (max-width: 768px) {
-            .social-links {
-                gap: 12px;
-            }
-            .social-links a {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-                gap: 10px;
-            }
-            .social-links a .icon {
-                width: 26px;
-                height: 26px;
-            }
-            .social-links a .icon svg {
-                width: 22px;
-                height: 22px;
-            }
-            .social-links a .social-text .name {
-                font-size: 0.9rem;
-            }
-            .social-links a .social-text .username {
-                display: none;
-            }
+            .social-links { gap: 12px; }
+            .social-links a { padding: 12px 20px; font-size: 0.9rem; gap: 10px; }
+            .social-links a .icon { width: 26px; height: 26px; }
+            .social-links a .icon svg { width: 22px; height: 22px; }
+            .social-links a .social-text .name { font-size: 0.9rem; }
+            .social-links a .social-text .username { display: none; }
         }
         @media (max-width: 480px) {
-            .social-links a {
-                padding: 10px 16px;
-                font-size: 0.8rem;
-                gap: 8px;
-            }
-            .social-links a .icon {
-                width: 22px;
-                height: 22px;
-            }
-            .social-links a .icon svg {
-                width: 18px;
-                height: 18px;
-            }
-            .social-links a .social-text .name {
-                font-size: 0.8rem;
-            }
+            .social-links a { padding: 10px 16px; font-size: 0.8rem; gap: 8px; }
+            .social-links a .icon { width: 22px; height: 22px; }
+            .social-links a .icon svg { width: 18px; height: 18px; }
+            .social-links a .social-text .name { font-size: 0.8rem; }
         }
 
         .about-img {
             border-radius: 4px;
-            box-shadow: 0 20px 40px rgba(10, 31, 61, 0.15);
+            box-shadow: 0 20px 40px rgba(10,31,61,0.15);
             transition: transform 0.6s ease, box-shadow 0.6s ease;
         }
-        .about-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 30px 60px rgba(10, 31, 61, 0.25);
-        }
+        .about-img:hover { transform: scale(1.02); box-shadow: 0 30px 60px rgba(10,31,61,0.25); }
         .about-stats {
             display: flex;
             gap: 2.5rem;
@@ -1172,7 +785,7 @@
             perspective: 600px;
         }
         .brand-card:hover {
-            box-shadow: 0 20px 40px rgba(10, 31, 61, 0.15);
+            box-shadow: 0 20px 40px rgba(10,31,61,0.15);
             transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
         }
         .brand-card-icon {
@@ -1186,9 +799,7 @@
             position: relative;
             transition: background 0.4s ease;
         }
-        .brand-card:hover .brand-card-icon {
-            background: var(--orange);
-        }
+        .brand-card:hover .brand-card-icon { background: var(--orange); }
         .brand-card-icon::after {
             content: '';
             position: absolute;
@@ -1199,27 +810,16 @@
             background: var(--orange);
             transition: width 0.4s ease, background 0.4s ease;
         }
-        .brand-card:hover .brand-card-icon::after {
-            width: 100%;
-            background: #fff;
-        }
-        .brand-card-icon i {
-            transition: transform 0.6s ease;
-        }
-        .brand-card:hover .brand-card-icon i {
-            transform: rotateY(180deg) scale(1.1);
-        }
-        .brand-card-body {
-            padding: 1.8rem;
-        }
+        .brand-card:hover .brand-card-icon::after { width: 100%; background: #fff; }
+        .brand-card-icon i { transition: transform 0.6s ease; }
+        .brand-card:hover .brand-card-icon i { transform: rotateY(180deg) scale(1.1); }
+        .brand-card-body { padding: 1.8rem; }
         .brand-card-body h4 {
             font-size: 1.4rem;
             margin-bottom: 0.8rem;
             transition: color 0.3s ease;
         }
-        .brand-card:hover .brand-card-body h4 {
-            color: var(--orange);
-        }
+        .brand-card:hover .brand-card-body h4 { color: var(--orange); }
         .brand-card-body ul {
             list-style: none;
             padding: 0;
@@ -1232,13 +832,8 @@
             border-bottom: 1px dashed #e5e9f0;
             transition: padding-left 0.3s ease, color 0.3s ease;
         }
-        .brand-card:hover .brand-card-body ul li {
-            padding-left: 8px;
-            color: var(--navy);
-        }
-        .brand-card-body ul li:last-child {
-            border-bottom: none;
-        }
+        .brand-card:hover .brand-card-body ul li { padding-left: 8px; color: var(--navy); }
+        .brand-card-body ul li:last-child { border-bottom: none; }
         .brand-card-link {
             color: var(--orange);
             font-weight: 700;
@@ -1248,10 +843,7 @@
             transition: all 0.3s ease;
             display: inline-block;
         }
-        .brand-card-link:hover {
-            color: var(--orange-dark);
-            transform: translateX(6px);
-        }
+        .brand-card-link:hover { color: var(--orange-dark); transform: translateX(6px); }
 
         .timeline {
             position: relative;
@@ -1269,9 +861,7 @@
             top: 0;
             border-radius: 2px;
         }
-        .timeline.animated::before {
-            height: 100%;
-        }
+        .timeline.animated::before { height: 100%; }
         .timeline-item {
             margin-bottom: 3rem;
             position: relative;
@@ -1280,19 +870,14 @@
             background: #fff;
             padding: 2rem;
             border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(10, 31, 61, 0.08);
+            box-shadow: 0 4px 15px rgba(10,31,61,0.08);
             width: 45%;
             position: relative;
             border: 1px solid #e5e9f0;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .timeline-content:hover {
-            box-shadow: 0 8px 30px rgba(10, 31, 61, 0.15);
-            transform: translateY(-4px);
-        }
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-        }
+        .timeline-content:hover { box-shadow: 0 8px 30px rgba(10,31,61,0.15); transform: translateY(-4px); }
+        .timeline-item:nth-child(odd) .timeline-content { margin-left: auto; }
         .timeline-dot {
             position: absolute;
             left: 50%;
@@ -1306,25 +891,12 @@
             z-index: 2;
             transition: transform 0.4s ease, background 0.4s ease;
         }
-        .timeline-item:hover .timeline-dot {
-            transform: translateX(-50%) scale(1.3);
-            background: var(--orange-dark);
-        }
-        .timeline-content h5 {
-            color: var(--navy);
-            font-weight: 700;
-        }
+        .timeline-item:hover .timeline-dot { transform: translateX(-50%) scale(1.3); background: var(--orange-dark); }
+        .timeline-content h5 { color: var(--navy); font-weight: 700; }
         @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-            .timeline-content {
-                width: calc(100% - 80px);
-                margin-left: 80px !important;
-            }
-            .timeline-dot {
-                left: 30px;
-            }
+            .timeline::before { left: 30px; }
+            .timeline-content { width: calc(100% - 80px); margin-left: 80px !important; }
+            .timeline-dot { left: 30px; }
         }
 
         .gallery-item {
@@ -1332,25 +904,21 @@
             overflow: hidden;
             border-radius: 4px;
             height: 240px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: box-shadow 0.4s ease;
         }
-        .gallery-item:hover {
-            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.2);
-        }
+        .gallery-item:hover { box-shadow: 0 8px 30px rgba(249,115,22,0.2); }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.7s ease;
         }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
+        .gallery-item:hover img { transform: scale(1.1); }
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(0deg, rgba(10, 31, 61, 0.9), transparent 60%);
+            background: linear-gradient(0deg, rgba(10,31,61,0.9), transparent 60%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -1359,9 +927,7 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
         .gallery-overlay strong {
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 1.2rem;
@@ -1369,9 +935,7 @@
             transform: translateY(20px);
             transition: transform 0.5s ease;
         }
-        .gallery-item:hover .gallery-overlay strong {
-            transform: translateY(0);
-        }
+        .gallery-item:hover .gallery-overlay strong { transform: translateY(0); }
 
         .btn-download-pdf {
             background: var(--orange);
@@ -1387,7 +951,7 @@
             align-items: center;
             gap: 10px;
             font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            box-shadow: 0 4px 15px rgba(249,115,22,0.3);
             cursor: pointer;
             margin-top: 20px;
             text-decoration: none;
@@ -1395,33 +959,25 @@
         .btn-download-pdf:hover {
             background: var(--orange-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
+            box-shadow: 0 8px 30px rgba(249,115,22,0.4);
             color: #fff;
         }
-        .btn-download-pdf i {
-            font-size: 1.2rem;
-        }
+        .btn-download-pdf i { font-size: 1.2rem; }
 
         .contact-section {
             background: var(--navy);
             color: #fff;
         }
-        .contact-section .eyebrow-label {
-            color: var(--orange);
-        }
-        .contact-section .section-title {
-            color: #fff;
-        }
+        .contact-section .eyebrow-label { color: var(--orange); }
+        .contact-section .section-title { color: #fff; }
         .contact-form {
             background: #fff;
             border-radius: 4px;
             padding: 2.5rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
             transition: box-shadow 0.4s ease;
         }
-        .contact-form:hover {
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-        }
+        .contact-form:hover { box-shadow: 0 25px 60px rgba(0,0,0,0.35); }
         .contact-form .form-control {
             border-radius: 2px;
             padding: 0.75rem;
@@ -1431,7 +987,7 @@
         }
         .contact-form .form-control:focus {
             border-color: var(--orange);
-            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
         }
         .contact-form button {
             background: var(--orange);
@@ -1455,17 +1011,12 @@
             left: -100%;
             width: 200%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.6s ease;
             z-index: -1;
         }
-        .contact-form button:hover::before {
-            left: 100%;
-        }
-        .contact-form button:hover {
-            background: var(--orange-dark);
-            transform: translateY(-2px);
-        }
+        .contact-form button:hover::before { left: 100%; }
+        .contact-form button:hover { background: var(--orange-dark); transform: translateY(-2px); }
         .contact-info-item {
             display: flex;
             gap: 1rem;
@@ -1475,7 +1026,7 @@
         .contact-info-icon {
             width: 48px;
             height: 48px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255,255,255,0.08);
             border: 1px solid var(--orange);
             border-radius: 50%;
             display: flex;
@@ -1502,17 +1053,12 @@
             margin: 0;
             font-size: 0.92rem;
         }
-        .contact-info-item a {
-            color: #b7c3d6;
-            transition: color 0.3s ease;
-        }
-        .contact-info-item a:hover {
-            color: var(--orange);
-        }
+        .contact-info-item a { color: #b7c3d6; transition: color 0.3s ease; }
+        .contact-info-item a:hover { color: var(--orange); }
         .social-link-footer {
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255,255,255,0.08);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -1563,12 +1109,8 @@
             background: var(--orange);
             transition: width 0.3s ease;
         }
-        footer ul li a:hover {
-            color: var(--orange);
-        }
-        footer ul li a:hover::after {
-            width: 100%;
-        }
+        footer ul li a:hover { color: var(--orange); }
+        footer ul li a:hover::after { width: 100%; }
         .footer-social {
             width: 38px;
             height: 38px;
@@ -1598,7 +1140,7 @@
             position: fixed;
             bottom: 100px;
             left: 20px;
-            background: rgba(10, 31, 61, 0.8);
+            background: rgba(10,31,61,0.8);
             backdrop-filter: blur(10px);
             color: white;
             padding: 8px 16px;
@@ -1607,8 +1149,8 @@
             font-weight: 600;
             z-index: 996;
             letter-spacing: 0.5px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             display: none;
             transition: opacity 0.5s ease;
         }
@@ -1619,14 +1161,10 @@
             border-radius: 50%;
             margin-right: 8px;
             vertical-align: middle;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255,255,255,0.2);
             transition: background 0.5s ease;
         }
-        @media (max-width: 480px) {
-            .color-indicator {
-                display: none !important;
-            }
-        }
+        @media (max-width: 480px) { .color-indicator { display: none !important; } }
 
         .whatsapp-float {
             position: fixed;
@@ -1641,26 +1179,15 @@
             align-items: center;
             justify-content: center;
             font-size: 1.9rem;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.5);
             z-index: 997;
             transition: all 0.3s;
             animation: pulseWhatsApp 2s infinite;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: #fff;
-            animation-play-state: paused;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); color: #fff; animation-play-state: paused; }
         @keyframes pulseWhatsApp {
-            0%,
-            100% {
-                transform: scale(1);
-                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 6px 40px rgba(37, 211, 102, 0.7);
-            }
+            0%,100% { transform: scale(1); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 6px 40px rgba(37,211,102,0.7); }
         }
 
         .back-to-top {
@@ -1676,53 +1203,60 @@
             align-items: center;
             justify-content: center;
             z-index: 997;
-            box-shadow: 0 6px 20px rgba(10, 31, 61, 0.35);
+            box-shadow: 0 6px 20px rgba(10,31,61,0.35);
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease;
         }
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
+        .back-to-top.show { opacity: 1; visibility: visible; }
         .back-to-top:hover {
             background: var(--orange);
             color: #fff;
             transform: translateY(-4px) rotate(360deg);
-            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
+            box-shadow: 0 8px 30px rgba(249,115,22,0.5);
         }
 
-        /* Ajustes para los plugins incrustados */
+        /* Estilos para los plugins incrustados */
+        .fb-plugin-wrapper, .tt-plugin-wrapper {
+            transition: box-shadow 0.4s ease, transform 0.3s ease;
+        }
         .fb-plugin-wrapper {
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             padding: 10px;
             overflow: hidden;
-            transition: box-shadow 0.4s ease;
         }
-        .fb-plugin-wrapper:hover {
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
+        .fb-plugin-wrapper:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.15); transform: translateY(-4px); }
         .tt-plugin-wrapper {
             background: #010101;
             border-radius: 16px;
             padding: 10px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.4s ease;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-        .tt-plugin-wrapper:hover {
-            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
+        .tt-plugin-wrapper:hover { box-shadow: 0 16px 50px rgba(0,0,0,0.5); transform: translateY(-4px); }
+        .fb-page, .tiktok-embed { width: 100% !important; }
+        .fb-page iframe, .tiktok-embed iframe { max-width: 100% !important; }
+
+        /* Fallback para cuando el plugin no carga */
+        .social-fallback {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
         }
-        /* Hacer que los iframes sean responsivos */
-        .fb-page,
-        .tiktok-embed {
-            width: 100% !important;
+        .social-fallback a {
+            color: var(--orange);
+            font-weight: 600;
         }
-        .fb-page iframe,
-        .tiktok-embed iframe {
-            max-width: 100% !important;
+        .fb-plugin-wrapper.error .social-fallback,
+        .tt-plugin-wrapper.error .social-fallback {
+            display: block;
+        }
+        .fb-plugin-wrapper.error .fb-page,
+        .tt-plugin-wrapper.error .tiktok-embed {
+            display: none;
         }
     </style>
 </head>
@@ -1737,7 +1271,6 @@
         <div class="splash-ring"></div>
         <div class="splash-ring"></div>
         <div class="splash-ring"></div>
-
         <div class="splash-wrapper">
             <div class="splash-logo-container">
                 <div class="splash-logo-glow"></div>
@@ -1765,12 +1298,10 @@
             <button class="btn-close-install" id="btnCloseInstall">✕</button>
         </div>
     </div>
-
     <button id="installFloatBtn">
         <span class="icon">📲</span>
         <span class="label">Instalar App</span>
     </button>
-
     <div class="color-indicator" id="colorIndicator">
         <span class="dot" id="colorDot"></span>
         <span id="colorName">Claro</span>
@@ -1854,7 +1385,7 @@
         </div>
     </section>
 
-    <!-- ===== ÚLTIMAS PUBLICACIONES (con plugins oficiales) ===== -->
+    <!-- ===== ÚLTIMAS PUBLICACIONES (con plugins oficiales mejorados) ===== -->
     <section id="redes" class="py-5">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
@@ -1865,7 +1396,8 @@
             <div class="row g-5 justify-content-center">
                 <!-- Facebook Page Plugin -->
                 <div class="col-lg-6 col-md-10" data-aos="flip-up" data-aos-duration="800">
-                    <div class="fb-plugin-wrapper">
+                    <div class="fb-plugin-wrapper" id="fbWrapper">
+                        <div id="fb-root"></div>
                         <div class="fb-page" 
                              data-href="https://www.facebook.com/profile.php?id=61591519017230" 
                              data-tabs="timeline" 
@@ -1874,28 +1406,38 @@
                              data-small-header="false" 
                              data-adapt-container-width="true" 
                              data-hide-cover="false" 
-                             data-show-facepile="true">
+                             data-show-facepile="true"
+                             data-lazy="true">
+                        </div>
+                        <div class="social-fallback">
+                            <i class="fas fa-exclamation-triangle" style="color: var(--orange); font-size: 2rem; display: block; margin-bottom: 10px;"></i>
+                            <p>No se pudo cargar el contenido de Facebook.</p>
+                            <a href="https://www.facebook.com/profile.php?id=61591519017230" target="_blank">Visitar nuestra página →</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- TikTok Perfil Embed -->
                 <div class="col-lg-6 col-md-10" data-aos="flip-up" data-aos-duration="800" data-aos-delay="100">
-                    <div class="tt-plugin-wrapper">
+                    <div class="tt-plugin-wrapper" id="ttWrapper">
                         <blockquote class="tiktok-embed" 
                                     cite="https://www.tiktok.com/@inssoconsultora" 
                                     data-unique-id="inssoconsultora" 
                                     data-embed-type="creator" 
                                     style="max-width: 100%; min-width: 288px; margin: 0 auto;">
                         </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
+                        <div class="social-fallback">
+                            <i class="fab fa-tiktok" style="color: #25f4ee; font-size: 2rem; display: block; margin-bottom: 10px;"></i>
+                            <p>No se pudo cargar el contenido de TikTok.</p>
+                            <a href="https://www.tiktok.com/@inssoconsultora" target="_blank">Visitar nuestro perfil →</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SÍGUENOS EN REDES SOCIALES (sección de enlaces) ===== -->
+    <!-- ===== SÍGUENOS EN REDES SOCIALES (enlaces directos) ===== -->
     <div id="social" class="container" data-aos="fade-up">
         <div class="social-section">
             <h3>📱 Síguenos en <span>Redes Sociales</span></h3>
@@ -1955,7 +1497,6 @@
                 <span class="eyebrow-label">Las mejores soluciones</span>
                 <h2 class="section-title">Nuestros Servicios</h2>
                 <p class="text-muted">Soluciones técnicas especializadas para la industria moderna, con la mejor relación calidad-cumplimiento del mercado.</p>
-
                 <a href="https://raw.githubusercontent.com/INSSO-ing/Insso-ingenier-a-y-consultor-a-/main/INSSO_Catalogo_A4_3Hojas.pdf"
                 download="Catalogo_Servicios_INSSO.pdf"
                 class="btn-download-pdf"
@@ -2249,15 +1790,99 @@
     </a>
     <a href="#inicio" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- ===== SDK de Facebook y scripts de TikTok ===== -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0">
-    </script>
-    <!-- El script de TikTok ya se carga dentro del bloque embed, pero lo ponemos también aquí por si acaso -->
-    <script async src="https://www.tiktok.com/embed.js"></script>
+    <!-- ===== SDK de Facebook (carga explícita y renderizado forzado) ===== -->
+    <script>
+        // Inicialización del SDK de Facebook
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '1234567890', // Opcional, no necesario para Page Plugin
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v18.0'
+            });
+            // Forzar renderizado de los plugins después de la carga
+            FB.XFBML.parse();
+            console.log('✅ SDK de Facebook cargado y plugins renderizados.');
+            // Ocultar fallback si el plugin se cargó correctamente
+            document.querySelectorAll('.fb-plugin-wrapper').forEach(wrapper => {
+                wrapper.classList.remove('error');
+            });
+        };
 
-    <!-- ===== SCRIPTS ===== -->
+        // Cargar el SDK de forma asíncrona
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/es_ES/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Fallback por si el SDK no carga (mostrar mensaje después de 8 segundos)
+        setTimeout(function() {
+            var fbWrappers = document.querySelectorAll('.fb-plugin-wrapper');
+            fbWrappers.forEach(function(wrapper) {
+                // Si el plugin de Facebook no se ha renderizado (no hay iframe dentro de .fb-page)
+                var fbPage = wrapper.querySelector('.fb-page');
+                if (fbPage && !fbPage.querySelector('iframe')) {
+                    wrapper.classList.add('error');
+                    console.warn('⚠️ El plugin de Facebook no se cargó. Mostrando fallback.');
+                }
+            });
+        }, 8000);
+    </script>
+
+    <!-- ===== TikTok Embed Script (carga asíncrona y reintento) ===== -->
+    <script>
+        // Cargar el script de TikTok solo una vez
+        function loadTikTokEmbed() {
+            if (document.querySelector('script[src="https://www.tiktok.com/embed.js"]')) {
+                // Si ya está cargado, forzar la re-ejecución
+                if (window.tiktokEmbed) {
+                    window.tiktokEmbed.reload();
+                }
+                return;
+            }
+            var script = document.createElement('script');
+            script.src = 'https://www.tiktok.com/embed.js';
+            script.async = true;
+            script.onload = function() {
+                console.log('✅ TikTok embed cargado.');
+                document.querySelectorAll('.tt-plugin-wrapper').forEach(wrapper => {
+                    wrapper.classList.remove('error');
+                });
+            };
+            script.onerror = function() {
+                console.warn('⚠️ No se pudo cargar el script de TikTok. Mostrando fallback.');
+                document.querySelectorAll('.tt-plugin-wrapper').forEach(wrapper => {
+                    wrapper.classList.add('error');
+                });
+            };
+            document.body.appendChild(script);
+        }
+
+        // Ejecutar la carga después de que el DOM esté listo
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            loadTikTokEmbed();
+        } else {
+            document.addEventListener('DOMContentLoaded', loadTikTokEmbed);
+        }
+
+        // Reintentar si falla después de 10 segundos
+        setTimeout(function() {
+            var ttWrappers = document.querySelectorAll('.tt-plugin-wrapper');
+            ttWrappers.forEach(function(wrapper) {
+                var blockquote = wrapper.querySelector('.tiktok-embed');
+                // Si no se ha generado el iframe dentro del blockquote (porque el script no corrió)
+                if (blockquote && !blockquote.querySelector('iframe')) {
+                    wrapper.classList.add('error');
+                    console.warn('⚠️ El plugin de TikTok no se cargó. Mostrando fallback.');
+                }
+            });
+        }, 10000);
+    </script>
+
+    <!-- ===== SCRIPTS ADICIONALES (AOS, Bootstrap, etc.) ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
